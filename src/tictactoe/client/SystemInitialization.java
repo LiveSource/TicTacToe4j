@@ -5,11 +5,11 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-/**
- * Prepare the system to initialize the game and show the game grid.
- */
 public class SystemInitialization implements EntryPoint {
 
+	/**
+	 * Prepare the system to initialize the game and show the game grid.
+	 */
 	public void onModuleLoad() {
 
 		RootPanel.get().setSize("100%", "100%");
