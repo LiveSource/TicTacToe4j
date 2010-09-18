@@ -1,5 +1,7 @@
 package tictactoe.client;
 
+import tictactoe.client.game.GameGrid;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RootPanel;
