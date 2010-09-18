@@ -7,6 +7,8 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class SystemInitialization implements EntryPoint {
 
+	public static String player = "O";
+	
 	/**
 	 * Prepare the system to initialize the game and show the game grid.
 	 */
