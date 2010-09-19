@@ -1,15 +1,14 @@
 package tictactoe.client;
 
-
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class SystemInitialization implements EntryPoint {
+public class StartGame implements EntryPoint {
 
 	public static String player = "O";
-	
+
 	/**
 	 * Prepare the system to initialize the game and show the game grid.
 	 */
