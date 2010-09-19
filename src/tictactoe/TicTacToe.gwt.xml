@@ -13,7 +13,7 @@
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='tictactoe.client.SystemInitialization'/>
+  <entry-point class='tictactoe.client.StartGame'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
