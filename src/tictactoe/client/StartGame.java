@@ -5,6 +5,11 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+/**
+ * Prepare the system to initialize the game and show the game grid.
+ * 
+ * @feature
+ */
 public class StartGame implements EntryPoint {
 
 	public static String player = "O";
