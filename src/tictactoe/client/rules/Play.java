@@ -4,6 +4,8 @@ import tictactoe.client.StartGame;
 
 /**
  * Logic that realizes a player move.
+ * 
+ * @feature
  */
 public class Play {
 
