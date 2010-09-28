@@ -2,11 +2,11 @@ package tictactoe.client.rules;
 
 import tictactoe.client.StartGame;
 
-/**
- * Logic that realizes a player move.
+/** 
+ * Realizes a player move.
  * 
- * @feature
- */
+ * @feature 
+ */ 
 public class Play {
 
 	public static String doPlay(int row, int column) {
