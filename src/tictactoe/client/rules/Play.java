@@ -1,24 +1,24 @@
 package tictactoe.client.rules;
 
-import tictactoe.client.StartGame;
+import tictactoe.client.GameStart;
 
-/** 
+/**
  * Realizes a player move.
  * 
- * @feature 
- */ 
+ * @feature
+ */
 public class Play {
 
 	public static String doPlay(int row, int column) {
 
-		String sign = "<font size=6><b>" + StartGame.player + "</b></font>";
+		String sign = "<font size=6><b>" + GameStart.player + "</b></font>";
 
-		if (StartGame.player.equals("O")) {
+		if (GameStart.player.equals("O")) {
 
-			StartGame.player = "X";
+			GameStart.player = "X";
 		} else {
 
-			StartGame.player = "O";
+			GameStart.player = "O";
 		}
 
 		return sign;

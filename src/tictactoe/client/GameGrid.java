@@ -1,6 +1,5 @@
 package tictactoe.client;
 
-
 import tictactoe.client.rules.Play;
 
 import com.google.gwt.event.dom.client.ClickEvent;
