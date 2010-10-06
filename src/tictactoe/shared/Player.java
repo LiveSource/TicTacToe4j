@@ -2,7 +2,7 @@ package tictactoe.shared;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class Player implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

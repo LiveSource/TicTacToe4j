@@ -1,6 +1,6 @@
 package tictactoe.client.authentication;
 
-import tictactoe.shared.User;
+import tictactoe.shared.Player;
 
 import com.google.gwt.user.client.Window;
 
@@ -11,7 +11,7 @@ import com.google.gwt.user.client.Window;
  */
 public class Login {
 
-	public Login(User user) {
+	public Login(Player user) {
 
 		Window.Location.assign(user.getLoginUrl());
 

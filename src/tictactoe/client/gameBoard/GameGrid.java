@@ -1,4 +1,4 @@
-package tictactoe.client;
+package tictactoe.client.gameBoard;
 
 import tictactoe.client.rules.Play;
 

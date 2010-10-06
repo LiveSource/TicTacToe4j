@@ -1,16 +1,16 @@
 package tictactoe.client.authentication;
 
-import tictactoe.shared.User;
+import tictactoe.shared.Player;
 
 import com.google.gwt.user.client.ui.Anchor;
 
 public class Logout extends Anchor {
 
-	public Logout(User user) {
+	public Logout(Player player) {
 
 		this.setText("Log out");
 
-		this.setHref(user.getLogoutUrl());
+		this.setHref(player.getLogoutUrl());
 
 	}
 }

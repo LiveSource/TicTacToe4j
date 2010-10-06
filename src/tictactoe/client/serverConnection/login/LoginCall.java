@@ -1,8 +1,8 @@
 package tictactoe.client.serverConnection.login;
 
-import tictactoe.client.GameStart;
 import tictactoe.client.authentication.Login;
-import tictactoe.shared.User;
+import tictactoe.client.gameBoard.GamePanel;
+import tictactoe.shared.Player;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
@@ -14,26 +14,26 @@ public class LoginCall {
 
 	public LoginCall() {
 
-		loginService.login(GWT.getHostPageBaseURL(), new AsyncCallback<User>() {
+		loginService.login(GWT.getHostPageBaseURL(),
+				new AsyncCallback<Player>() {
 
-			public void onSuccess(User result) {
-				User user = result;
+					public void onSuccess(Player player) {
 
-				if (user.isLoggedIn()) {
+						if (player.isLoggedIn()) {
 
-					new GameStart(user);
+							new GamePanel(player);
 
-				} else {
+						} else {
 
-					new Login(user);
-				}
-			}
+							new Login(player);
+						}
+					}
 
-			public void onFailure(Throwable error) {
+					public void onFailure(Throwable error) {
 
-				Window.alert(error.getMessage());
-			}
-		});
+						Window.alert(error.getMessage());
+					}
+				});
 
 	}
 }

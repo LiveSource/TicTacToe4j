@@ -1,6 +1,7 @@
 package tictactoe.client.rules;
 
-import tictactoe.client.GameStart;
+import tictactoe.client.TicTacToe;
+import tictactoe.shared.Game;
 
 /**
  * Realizes a player move.
@@ -11,14 +12,15 @@ public class Play {
 
 	public static String doPlay(int row, int column) {
 
-		String sign = "<font size=6><b>" + GameStart.player + "</b></font>";
+		String sign = "<font size=6><b>" + TicTacToe.gameStatus.getNextPlayer()
+				+ "</b></font>";
 
-		if (GameStart.player.equals("O")) {
+		if (TicTacToe.gameStatus.getNextPlayer().equals(Game.PLAYER_O)) {
 
-			GameStart.player = "X";
+			TicTacToe.gameStatus.setNextPlayer(Game.PLAYER_X);
 		} else {
 
-			GameStart.player = "O";
+			TicTacToe.gameStatus.setNextPlayer(Game.PLAYER_O);
 		}
 
 		return sign;
