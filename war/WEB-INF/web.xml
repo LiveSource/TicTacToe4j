@@ -4,22 +4,31 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-  
-  <!-- Servlets -->
-<servlet>
-    <servlet-name>loginService</servlet-name>
-    <servlet-class>tictactoe.server.LoginServiceImpl</servlet-class>
-  </servlet>
 
-  <servlet-mapping>
-    <servlet-name>loginService</servlet-name>
-    <url-pattern>/tictactoe/login</url-pattern>
-  </servlet-mapping>
-  
-  
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>TicTacToe.html</welcome-file>
-  </welcome-file-list>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>loginService</servlet-name>
+		<servlet-class>tictactoe.server.LoginServiceImplementation</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>gameService</servlet-name>
+		<servlet-class>tictactoe.server.gameLogic.GameLogicImplementation</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>loginService</servlet-name>
+		<url-pattern>/tictactoe/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>gameService</servlet-name>
+		<url-pattern>/tictactoe/game</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>TicTacToe.html</welcome-file>
+	</welcome-file-list>
 
 </web-app>
