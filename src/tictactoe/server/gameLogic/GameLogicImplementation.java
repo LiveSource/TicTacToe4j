@@ -4,7 +4,7 @@ import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 
-import tictactoe.client.serverConnection.game.GameService;
+import tictactoe.client.serverCalls.game.GameService;
 import tictactoe.shared.Game;
 import tictactoe.shared.Player;
 
