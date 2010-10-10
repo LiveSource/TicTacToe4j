@@ -1,6 +1,6 @@
 package tictactoe.client;
 
-import tictactoe.client.serverConnection.login.LoginCall;
+import tictactoe.client.serverCalls.login.LoginCall;
 import tictactoe.shared.Game;
 
 /**
