@@ -1,6 +1,6 @@
 package tictactoe.server;
 
-import tictactoe.client.serverConnection.login.LoginService;
+import tictactoe.client.serverCalls.login.LoginService;
 import tictactoe.shared.Player;
 
 import com.google.appengine.api.users.User;
