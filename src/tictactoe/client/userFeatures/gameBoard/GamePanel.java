@@ -7,6 +7,11 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+/** 
+ * The web page that the game appears.
+ *  
+ */
+
 public class GamePanel extends VerticalPanel {
 
 	public static VerticalPanel vpPlayerO = new VerticalPanel();
