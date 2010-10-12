@@ -3,10 +3,14 @@ package tictactoe.client.userFeatures.rules;
 import tictactoe.client.TicTacToe;
 import tictactoe.shared.Game;
 
-/**
+
+
+/** 
  * Realizes a player move.
+TODO: Change the X for "Y"
  * 
- * @feature
+ * @todo
+ * @feature 
  */
 public class Play {
 
