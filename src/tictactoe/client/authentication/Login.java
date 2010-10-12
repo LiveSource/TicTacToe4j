@@ -4,10 +4,11 @@ import tictactoe.shared.Player;
 
 import com.google.gwt.user.client.Window;
 
-/**
+
+
+/** 
  * Insert user authentication and login into the game.
- * 
- * @todo
+ *  
  */
 public class Login {
 
