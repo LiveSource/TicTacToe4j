@@ -1,4 +1,4 @@
-package userFeatures.rules;
+package tictactoe.client.help;
 
 import junit.framework.TestCase;
 
