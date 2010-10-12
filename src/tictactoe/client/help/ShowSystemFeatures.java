@@ -1,4 +1,4 @@
-package tictactoe.client.userFeatures.rules.help;
+package tictactoe.client.help;
 
 /** 
 * List all the features available for the game. 
