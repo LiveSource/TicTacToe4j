@@ -7,8 +7,10 @@ import tictactoe.shared.Player;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 
+
+
 /** 
- * Show the current players name in the game panel.
+ * Show the current players name in the game panel. Test
  *  
  */
 
