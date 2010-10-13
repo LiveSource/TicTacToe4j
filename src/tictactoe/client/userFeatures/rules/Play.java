@@ -5,11 +5,11 @@ import tictactoe.shared.Game;
 
 
 
+
+
 /** 
  * Realizes a player move.
-TODO: Change the X for "Y"
  * 
- * @todo
  * @feature 
  */
 public class Play {
