@@ -1,10 +1,12 @@
 package tictactoe.client.userFeatures.rules;
 
-/**
+
+
+/** 
  * Verify if the player won.
  * 
- * @todo
- * @feature
+ * @TODO
+ * @feature 
  */
 public class Win {
 
