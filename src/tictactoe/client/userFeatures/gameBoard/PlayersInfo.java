@@ -7,6 +7,11 @@ import tictactoe.shared.Player;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 
+/** 
+ * Show the current players name in the game panel.
+ *  
+ */
+
 public class PlayersInfo extends HorizontalPanel {
 
 	public PlayersInfo(Game gameStatus, Player player) {
