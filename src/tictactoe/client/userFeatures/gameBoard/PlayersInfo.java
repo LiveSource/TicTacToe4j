@@ -11,8 +11,10 @@ import com.google.gwt.user.client.ui.Label;
 
 
 
+
+
 /** 
- * Show the current players name in the game panel. Test 2 
+ * Show the current players name in the game panel.
  *  
  */
 
