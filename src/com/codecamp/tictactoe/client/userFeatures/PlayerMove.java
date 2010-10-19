@@ -7,6 +7,8 @@ import com.google.gwt.user.client.ui.HTMLTable.Cell;
 /**
  * Draws an X or an O on the Game Board depending on which player's turn it is,
  * but only if the selected cell is empty.
+ * 
+ * @feature
  */
 public class PlayerMove {
 
