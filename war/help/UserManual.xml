@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features project="Tic Tac Toe">
+	<feature>
+		<className>GameBoard</className>
+		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
+		<featureName>Game Board</featureName>
+		<description>Lays out a new empty game board.</description>
+	</feature>
+	<feature>
+		<className>GameGrid</className>
+		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
+		<featureName>Game Grid</featureName>
+		<description>Draws the crosshatch for the tic tac toe game that is
+			ready for a player.</description>
+	</feature>
+	<feature>
+		<className>PlayerMove</className>
+		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
+		<featureName>Player Move</featureName>
+		<description>Draws an X or an O on the Game Board depending on which
+			player's turn it is,
+			but only if the selected cell is empty.</description>
+	</feature>
+</features>  
