@@ -4,26 +4,64 @@
 		<className>GameBoard</className>
 		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
 		<featureName>Game Board</featureName>
-		<description>Lays out a new empty game board.</description>
+		<featureDescription>Lays out a new empty game board.
+		</featureDescription>
+		<methods />
 	</entry>
 	<entry feature="false">
 		<className>GameGrid</className>
 		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
 		<featureName>Game Grid</featureName>
-		<description>Draws the crosshatch for the tic tac toe game that is
-			ready for a player.</description>
+		<featureDescription>Draws the crosshatch for the tic tac toe game that
+			is ready for a player.</featureDescription>
+		<methods>
+			<method>
+				<methodName>makeMove</methodName>
+				<methodDescription></methodDescription>
+			</method>
+			<method>
+				<methodName>formatGridCells</methodName>
+				<methodDescription></methodDescription>
+			</method>
+		</methods>
 	</entry>
 	<entry feature="true">
 		<className>PlayerMove</className>
 		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
 		<featureName>Player Move</featureName>
-		<description>Realizes all the moves selected by the players.
-		</description>
+		<featureDescription>Realizes all the moves selected by the players.
+		</featureDescription>
+		<methods>
+			<method>
+				<methodName>makeMove</methodName>
+				<methodDescription>When the player clicks in a cell, the game draws
+					an X or an O on the Game
+					Board depending on which player's turn it is.</methodDescription>
+			</method>
+			<method>
+				<methodName>cellIsEmpty</methodName>
+				<methodDescription>The player can only select cells that weren't
+					already selected
+					previously.</methodDescription>
+			</method>
+			<method>
+				<methodName>toggleCurrentPlayer</methodName>
+				<methodDescription>After the player move, the game prepares itself
+					for the next player.</methodDescription>
+			</method>
+		</methods>
 	</entry>
 	<entry feature="true">
 		<className>Win</className>
 		<classPath>com.codecamp.tictactoe.client.userFeatures</classPath>
 		<featureName>Win</featureName>
-		<description>Highlights the sequence that made a win.</description>
+		<featureDescription>Highlights the sequence that made a win.
+		</featureDescription>
+		<methods>
+			<method>
+				<methodName>showWinner</methodName>
+				<methodDescription></methodDescription>
+			</method>
+		</methods>
 	</entry>
 </entries>  
