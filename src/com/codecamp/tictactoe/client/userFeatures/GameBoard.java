@@ -5,7 +5,9 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
- * Lays out a new empty game board.
+ * The Game Board is the web page where the game is shown. The Game Board
+ * accommodates the game grid and also some options such as a restart button,
+ * help, game score, game status, ...
  */
 public class GameBoard extends VerticalPanel {
 

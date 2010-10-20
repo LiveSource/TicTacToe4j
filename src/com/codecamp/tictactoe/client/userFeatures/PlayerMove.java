@@ -5,15 +5,15 @@ import com.codecamp.tictactoe.client.TicTacToe;
 import com.google.gwt.user.client.ui.HTMLTable.Cell;
 
 /**
- * Realizes all the moves selected by the players.
+ * Realizes a move in the game.
  * 
  * @feature
  */
 public class PlayerMove {
 
 	/**
-	 * When the player clicks in a cell, the game draws an X or an O on the Game
-	 * Board depending on which player's turn it is.
+	 * When the player clicks in a cell, the game draws an O or a X on the game
+	 * grid depending on which player's turn it is.
 	 */
 	public static void makeMove(GameGrid gameGrid, Cell cell) {
 
@@ -32,8 +32,7 @@ public class PlayerMove {
 	}
 
 	/**
-	 * The player can only select cells that weren't already selected
-	 * previously.
+	 * Finds out if a cell was already selected.
 	 */
 	private static boolean cellIsEmpty(GameGrid gameGrid, Cell cell) {
 
@@ -44,7 +43,8 @@ public class PlayerMove {
 	}
 
 	/**
-	 * After the player move, the game prepares itself for the next player.
+	 * Switches between players. If X played last, it is now O's turn to plays,
+	 * and vice versa.
 	 */
 	public static void toggleCurrentPlayer() {
 

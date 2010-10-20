@@ -7,8 +7,8 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 /**
- * Draws the crosshatch for the tic tac toe game that is ready for a player.
- * 
+ * A 3x3 grid of cells in which players will enter a mark to indicate their
+ * desired move.
  */
 public class GameGrid extends Grid {
 
