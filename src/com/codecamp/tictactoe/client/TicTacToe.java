@@ -1,6 +1,7 @@
 package com.codecamp.tictactoe.client;
 
 import com.codecamp.tictactoe.client.help.Help;
+import com.codecamp.tictactoe.client.help.LoadSpecificationXML;
 import com.codecamp.tictactoe.client.userFeatures.GameBoard;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -18,6 +19,8 @@ public class TicTacToe implements EntryPoint {
 	public static String sequenceWinner = null;
 
 	public void onModuleLoad() {
+
+		LoadSpecificationXML.loadXMLFile();
 
 		RootPanel.get("gameBoardHtmlTagId").add(helpImage());
 
