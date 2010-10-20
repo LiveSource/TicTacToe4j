@@ -2,11 +2,15 @@ package com.codecamp.tictactoe.client.userFeatures;
 
 import com.codecamp.tictactoe.client.TicTacToe;
 
-/**
+
+
+/** 
  * Highlights the three consecutive marks in a horizontal, vertical, or diagonal
- * row that won the game.
+ row that won the game.
+TODO: make the row go green not red when someone wins
  * 
- * @feature
+ * @TODO
+ * @feature 
  */
 public class WinningSequence {
 
