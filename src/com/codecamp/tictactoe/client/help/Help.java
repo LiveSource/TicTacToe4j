@@ -1,5 +1,7 @@
 package com.codecamp.tictactoe.client.help;
 
+import java.util.HashMap;
+
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Anchor;
@@ -9,6 +11,8 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class Help {
+
+	public static HashMap<String, HelpEntry> helpEntries = new HashMap<String, HelpEntry>();
 
 	public VerticalPanel documentationMenu = new VerticalPanel();
 	public static VerticalPanel documentationPanel = new VerticalPanel();
@@ -60,7 +64,7 @@ public class Help {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				LoadSpecificationXML.loadXMLFile(true);
+				new ShowFeaturesList();
 			}
 		});
 		vp.add(linkFeaturesList);
@@ -71,7 +75,7 @@ public class Help {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				LoadSpecificationXML.loadXMLFile(false);
+				new ShowUserManual();
 			}
 		});
 		vp.add(linkUserManual);

@@ -1,84 +1,35 @@
 package com.codecamp.tictactoe.client.help;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Element;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.XMLParser;
 
 /**
- * List all the features available for the game.
+ * List all the help entries available for the game.
  */
 public class ShowUserManual extends VerticalPanel {
 
-	private static final String ENTRY = "entry";
-	private static final String FEATURE = "feature";
-	private static final String CLASS_NAME = "className";
-	private static final String CLASS_PATH = "classPath";
-	private static final String FEATURE_NAME = "featureName";
-	private static final String DESCRIPTION = "description";
+	public ShowUserManual() {
 
-	public ShowUserManual(String xmlContent) {
+		Help.documentationPanel.clear();
 
 		this.setSpacing(20);
 
-		for (HTML html : getFeaturesList(xmlContent)) {
+		HashMap<String, HelpEntry> helpEntries = Help.helpEntries;
 
-			this.add(html);
+		for (Iterator<String> helpKeys = helpEntries.keySet().iterator(); helpKeys
+				.hasNext();) {
+
+			String helpKey = (String) helpKeys.next();
+
+			HelpEntry helpEntry = (HelpEntry) helpEntries.get(helpKey);
+
+			this.add(ShowFeaturesList.getEntryHTML(helpEntry.getFeatureName(),
+					helpEntry.getFeatureDescription()));
 		}
 
-	}
-
-	public static ArrayList<HTML> getFeaturesList(String xmlContent) {
-
-		Document xmlDoc = XMLParser.parse(xmlContent);
-		Element root = xmlDoc.getDocumentElement();
-		XMLParser.removeWhitespace(xmlDoc);
-
-		NodeList entries = root.getElementsByTagName(ENTRY);
-
-		ArrayList<HTML> htmlArray = new ArrayList<HTML>();
-
-		for (int i = 0; i < entries.getLength(); i++) {
-
-			Element entry = (Element) entries.item(i);
-
-			Element featureName = (Element) entry.getElementsByTagName(
-					FEATURE_NAME).item(0);
-
-			Element description = (Element) entry.getElementsByTagName(
-					DESCRIPTION).item(0);
-
-			htmlArray.add(ShowUserManual
-					.getFeature(featureName.getFirstChild().getNodeValue(),
-							description.getFirstChild().getNodeValue()));
-
-		}
-
-		return htmlArray;
-	}
-
-	public static HTML getFeature(String featureName, String featureDescription) {
-
-		String name = "<br><B>" + featureName + "</B> ";
-
-		String description = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT SIZE=1>"
-				+ featureDescription + "</FONT>";
-
-		HTML html = new HTML(name + description);
-
-		html.addClickHandler(new ClickHandler() {
-			public void onClick(ClickEvent sender) {
-
-			}
-		});
-
-		return html;
+		Help.documentationPanel.add(this);
 	}
 
 }
