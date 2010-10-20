@@ -1,10 +1,13 @@
 package com.codecamp.tictactoe.client.userFeatures;
 
+
+
 /** 
-*  
-* 
-* @TODO 
-*/
+ * Stops evil getting in.
+ * 
+ * @TODO
+ * @feature 
+ */
 public class PlayerLogin {
 
 }
