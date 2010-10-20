@@ -60,7 +60,7 @@ public class Help {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				LoadFeaturesList.loadXMLFile();
+				LoadSpecificationXML.loadXMLFile(true);
 			}
 		});
 		vp.add(linkFeaturesList);
@@ -71,7 +71,7 @@ public class Help {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				LoadUserManual.loadXMLFile();
+				LoadSpecificationXML.loadXMLFile(false);
 			}
 		});
 		vp.add(linkUserManual);

@@ -7,12 +7,12 @@ import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;
 
-public class LoadFeaturesList {
+public class LoadSpecificationXML {
 
-	public static void loadXMLFile() {
+	public static void loadXMLFile(final boolean isFeatureList) {
 
 		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET,
-				"/help/FeaturesList.xml");
+				"/help/Specification.xml");
 
 		try {
 			requestBuilder.sendRequest(null, new RequestCallback() {
@@ -21,8 +21,16 @@ public class LoadFeaturesList {
 						Response response) {
 
 					Help.documentationPanel.clear();
-					Help.documentationPanel.add(new ShowFeaturesList(response
-							.getText()));
+
+					if (isFeatureList) {
+
+						Help.documentationPanel.add(new ShowFeaturesList(
+								response.getText()));
+					} else {
+
+						Help.documentationPanel.add(new ShowUserManual(response
+								.getText()));
+					}
 				}
 
 				public void onError(Request request, Throwable exception) {

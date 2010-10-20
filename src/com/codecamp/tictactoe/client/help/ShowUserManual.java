@@ -14,7 +14,7 @@ import com.google.gwt.xml.client.XMLParser;
 /**
  * List all the features available for the game.
  */
-public class ShowFeaturesList extends VerticalPanel {
+public class ShowUserManual extends VerticalPanel {
 
 	private static final String ENTRY = "entry";
 	private static final String FEATURE = "feature";
@@ -23,7 +23,7 @@ public class ShowFeaturesList extends VerticalPanel {
 	private static final String FEATURE_NAME = "featureName";
 	private static final String DESCRIPTION = "description";
 
-	public ShowFeaturesList(String xmlContent) {
+	public ShowUserManual(String xmlContent) {
 
 		this.setSpacing(20);
 
@@ -48,18 +48,16 @@ public class ShowFeaturesList extends VerticalPanel {
 
 			Element entry = (Element) entries.item(i);
 
-			if (Boolean.parseBoolean(entry.getAttribute(FEATURE))) {
+			Element featureName = (Element) entry.getElementsByTagName(
+					FEATURE_NAME).item(0);
 
-				Element featureName = (Element) entry.getElementsByTagName(
-						FEATURE_NAME).item(0);
+			Element description = (Element) entry.getElementsByTagName(
+					DESCRIPTION).item(0);
 
-				Element description = (Element) entry.getElementsByTagName(
-						DESCRIPTION).item(0);
+			htmlArray.add(ShowUserManual
+					.getFeature(featureName.getFirstChild().getNodeValue(),
+							description.getFirstChild().getNodeValue()));
 
-				htmlArray.add(ShowFeaturesList.getFeature(featureName
-						.getFirstChild().getNodeValue(), description
-						.getFirstChild().getNodeValue()));
-			}
 		}
 
 		return htmlArray;
