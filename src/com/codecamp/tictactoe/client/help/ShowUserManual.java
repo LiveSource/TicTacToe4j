@@ -30,7 +30,7 @@ public class ShowUserManual extends VerticalPanel {
 					helpEntry.getFeatureName(),
 					helpEntry.getFeatureDescription());
 
-			entryHTML.setHTML(entryHTML.getHTML()
+			entryHTML.setHTML(entryHTML.getHTML() + "<br>"
 					+ entryMethods(helpEntry.getMethods()));
 
 			this.add(entryHTML);
@@ -50,8 +50,8 @@ public class ShowUserManual extends VerticalPanel {
 			if (method.getDescription() != null
 					&& !method.getDescription().equals("")) {
 
-				methodsText += "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-						+ method.getDescription();
+				methodsText += "<blockquote>" + method.getDescription()
+						+ "</blockquote>";
 			}
 		}
 
