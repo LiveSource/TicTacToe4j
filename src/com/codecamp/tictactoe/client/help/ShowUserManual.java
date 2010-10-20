@@ -3,6 +3,7 @@ package com.codecamp.tictactoe.client.help;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
@@ -25,11 +26,36 @@ public class ShowUserManual extends VerticalPanel {
 
 			HelpEntry helpEntry = (HelpEntry) helpEntries.get(helpKey);
 
-			this.add(ShowFeaturesList.getEntryHTML(helpEntry.getFeatureName(),
-					helpEntry.getFeatureDescription()));
+			HTML entryHTML = ShowFeaturesList.getEntryHTML(
+					helpEntry.getFeatureName(),
+					helpEntry.getFeatureDescription());
+
+			entryHTML.setHTML(entryHTML.getHTML()
+					+ entryMethods(helpEntry.getMethods()));
+
+			this.add(entryHTML);
 		}
 
 		Help.documentationPanel.add(this);
+	}
+
+	private static String entryMethods(final HelpMethod[] methods) {
+
+		String methodsText = "";
+
+		for (int i = 0; i < methods.length; i++) {
+
+			HelpMethod method = methods[i];
+
+			if (method.getDescription() != null
+					&& !method.getDescription().equals("")) {
+
+				methodsText += "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+						+ method.getDescription();
+			}
+		}
+
+		return methodsText;
 	}
 
 }

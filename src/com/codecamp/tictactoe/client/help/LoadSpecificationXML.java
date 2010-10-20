@@ -22,6 +22,11 @@ public class LoadSpecificationXML {
 	private static final String FEATURE_NAME = "featureName";
 	private static final String FEATURE_DESCRIPTION = "featureDescription";
 
+	private static final String METHODS = "methods";
+	private static final String METHOD = "method";
+	private static final String METHOD_NAME = "methodName";
+	private static final String METHOD_DESCRIPTION = "methodDescription";
+
 	public static void loadXMLFile() {
 
 		RequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.GET,
@@ -83,6 +88,8 @@ public class LoadSpecificationXML {
 						.toString());
 			}
 
+			helpEntry.setMethods(entryMethods(entryElement));
+
 			String entryKey = entryElement.getElementsByTagName(CLASS_PATH)
 					.item(0).toString()
 					+ "."
@@ -93,5 +100,30 @@ public class LoadSpecificationXML {
 		}
 
 		return helpEntries;
+	}
+
+	private static HelpMethod[] entryMethods(Element entryElement) {
+
+		NodeList methods = entryElement.getElementsByTagName(METHOD);
+
+		HelpMethod[] helpMethods = new HelpMethod[methods.getLength()];
+
+		for (int i = 0; i < methods.getLength(); i++) {
+
+			Element methodElement = (Element) methods.item(i);
+
+			HelpMethod helpMethod = new HelpMethod();
+
+			helpMethod.setName(methodElement.getElementsByTagName(METHOD_NAME)
+					.item(0).toString());
+
+			helpMethod.setDescription(methodElement
+					.getElementsByTagName(METHOD_DESCRIPTION).item(0)
+					.getChildNodes().toString());
+
+			helpMethods[i] = helpMethod;
+		}
+
+		return helpMethods;
 	}
 }

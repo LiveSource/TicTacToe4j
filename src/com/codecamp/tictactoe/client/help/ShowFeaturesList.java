@@ -44,8 +44,8 @@ public class ShowFeaturesList extends VerticalPanel {
 
 		String name = "<br><B>" + featureName + "</B> ";
 
-		String description = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT SIZE=1>"
-				+ featureDescription + "</FONT>";
+		String description = "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+				+ featureDescription;
 
 		HTML html = new HTML(name + description);
 
