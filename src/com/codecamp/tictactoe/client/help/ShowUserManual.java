@@ -26,14 +26,18 @@ public class ShowUserManual extends VerticalPanel {
 
 			HelpEntry helpEntry = (HelpEntry) helpEntries.get(helpKey);
 
-			HTML entryHTML = ShowFeaturesList.getEntryHTML(
-					helpEntry.getFeatureName(),
-					helpEntry.getFeatureDescription());
+			if (helpEntry.isSpecification()) {
 
-			entryHTML.setHTML(entryHTML.getHTML() + "<br>"
-					+ entryMethods(helpEntry.getMethods()));
+				HTML entryHTML = ShowFeaturesList.getEntryHTML(
+						helpEntry.getFeatureName(),
+						helpEntry.getFeatureDescription());
 
-			this.add(entryHTML);
+				entryHTML.setHTML(entryHTML.getHTML() + "<br>"
+						+ entryMethods(helpEntry.getMethods()));
+
+				this.add(entryHTML);
+
+			}
 		}
 
 		Help.documentationPanel.add(this);

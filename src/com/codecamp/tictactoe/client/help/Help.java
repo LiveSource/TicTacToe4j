@@ -10,7 +10,11 @@ import com.google.gwt.user.client.ui.HasAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class Help {
+/**
+ * Instructions for the application functions while using the it, to try solve
+ * user problems.
+ */
+public class Help extends DialogBox {
 
 	public static HashMap<String, HelpEntry> helpEntries = new HashMap<String, HelpEntry>();
 
@@ -19,14 +23,14 @@ public class Help {
 
 	public Help() {
 
-		DialogBox dialogBox = new DialogBox();
+		this.setSize("600px", "400px");
+		this.center();
+		this.setText("Help");
+		this.setGlassEnabled(true);
+		this.setAnimationEnabled(true);
+		this.setAutoHideEnabled(true);
 
-		dialogBox.setSize("600px", "400px");
-		dialogBox.center();
-		dialogBox.setText("Help");
-		dialogBox.setGlassEnabled(true);
-		dialogBox.setAnimationEnabled(true);
-		dialogBox.setAutoHideEnabled(true);
+		this.setTitle(HelpHint.getHelpHint(this.getClass()));
 
 		VerticalPanel vp = new VerticalPanel();
 		vp.setSize("600px", "400px");
@@ -47,9 +51,9 @@ public class Help {
 
 		vp.add(hp);
 
-		dialogBox.setWidget(vp);
+		this.setWidget(vp);
 
-		dialogBox.show();
+		this.show();
 	}
 
 	private VerticalPanel showDocumentationMenu() {

@@ -2,6 +2,7 @@ package com.codecamp.tictactoe.client.help;
 
 import java.util.HashMap;
 
+import com.codecamp.tictactoe.client.GameInitialization;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
@@ -17,6 +18,7 @@ public class LoadSpecificationXML {
 
 	private static final String ENTRY = "entry";
 	private static final String FEATURE = "feature";
+	private static final String SPECIFICATION = "specification";
 	private static final String CLASS_NAME = "className";
 	private static final String CLASS_PATH = "classPath";
 	private static final String FEATURE_NAME = "featureName";
@@ -40,6 +42,7 @@ public class LoadSpecificationXML {
 
 					Help.helpEntries = convertHelpHashMap(response.getText());
 
+					new GameInitialization();
 				}
 
 				public void onError(Request request, Throwable exception) {
@@ -76,8 +79,12 @@ public class LoadSpecificationXML {
 			helpEntry.setFeature(Boolean.parseBoolean(entryElement
 					.getAttribute(FEATURE)));
 
+			helpEntry.setSpecification(Boolean.parseBoolean(entryElement
+					.getAttribute(SPECIFICATION)));
+
 			helpEntry.setFeatureName(entryElement
-					.getElementsByTagName(FEATURE_NAME).item(0).toString());
+					.getElementsByTagName(FEATURE_NAME).item(0).getChildNodes()
+					.toString());
 
 			Element featureDescriptionElement = (Element) entryElement
 					.getElementsByTagName(FEATURE_DESCRIPTION).item(0);
@@ -85,16 +92,16 @@ public class LoadSpecificationXML {
 			if (featureDescriptionElement != null) {
 
 				helpEntry.setFeatureDescription(featureDescriptionElement
-						.toString());
+						.getChildNodes().toString());
 			}
 
 			helpEntry.setMethods(entryMethods(entryElement));
 
 			String entryKey = entryElement.getElementsByTagName(CLASS_PATH)
-					.item(0).toString()
+					.item(0).getChildNodes().toString()
 					+ "."
 					+ entryElement.getElementsByTagName(CLASS_NAME).item(0)
-							.toString();
+							.getChildNodes().toString();
 
 			helpEntries.put(entryKey, helpEntry);
 		}

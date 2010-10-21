@@ -12,6 +12,8 @@ public class HelpEntry implements Serializable {
 
 	private boolean feature;
 
+	private boolean specification;
+
 	private String featureName;
 
 	private String featureDescription;
@@ -40,6 +42,14 @@ public class HelpEntry implements Serializable {
 
 	public void setFeature(boolean feature) {
 		this.feature = feature;
+	}
+
+	public boolean isSpecification() {
+		return specification;
+	}
+
+	public void setSpecification(boolean specification) {
+		this.specification = specification;
 	}
 
 	public String getFeatureName() {
