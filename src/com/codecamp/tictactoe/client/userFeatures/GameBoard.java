@@ -1,10 +1,6 @@
 package com.codecamp.tictactoe.client.userFeatures;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.DecoratedPopupPanel;
-import com.google.gwt.user.client.ui.HTML;
+import com.codecamp.tictactoe.client.help.HelpHint;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -20,31 +16,13 @@ public class GameBoard extends VerticalPanel {
 	public GameBoard() {
 
 		this.setSize("100%", "100%");
+
 		this.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
 		this.add(gameGrid);
 
-		showHelpHint();
-
+		this.setTitle(HelpHint.getHelpHint(this.getClass()));
 	}
 
-	private void showHelpHint() {
-
-		this.addHandler(new ClickHandler() {
-
-			@Override
-			public void onClick(ClickEvent event) {
-				// TODO Auto-generated method stub
-
-				Window.alert("test");
-
-				final DecoratedPopupPanel simplePopup = new DecoratedPopupPanel(
-						true);
-				simplePopup.setWidth("150px");
-				simplePopup.setWidget(new HTML("test"));
-				simplePopup.show();
-			}
-		}, ClickEvent.getType());
-	}
 }

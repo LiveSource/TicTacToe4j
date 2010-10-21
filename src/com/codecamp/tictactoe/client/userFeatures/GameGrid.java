@@ -1,13 +1,9 @@
 package com.codecamp.tictactoe.client.userFeatures;
 
+import com.codecamp.tictactoe.client.help.HelpHint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.MouseOverEvent;
-import com.google.gwt.event.dom.client.MouseOverHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 import com.google.gwt.user.client.ui.Grid;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
@@ -24,6 +20,8 @@ public class GameGrid extends Grid {
 		this.setBorderWidth(1);
 		this.setSize("400px", "400px");
 
+		this.setTitle("test Title");
+
 		formatGridCells();
 
 		this.addClickHandler(new ClickHandler() {
@@ -38,7 +36,7 @@ public class GameGrid extends Grid {
 			}
 		});
 
-		showHelpHint();
+		this.setTitle(HelpHint.getHelpHint(this.getClass()));
 	}
 
 	private void makeMove(Cell cell) {
@@ -65,25 +63,5 @@ public class GameGrid extends Grid {
 				this.setCellFormatter(formatter);
 			}
 		}
-
 	}
-
-	private void showHelpHint() {
-
-		this.addHandler(new MouseOverHandler() {
-
-			@Override
-			public void onMouseOver(MouseOverEvent event) {
-
-				Window.alert("test");
-
-				final DecoratedPopupPanel simplePopup = new DecoratedPopupPanel(
-						true);
-				simplePopup.setWidth("150px");
-				simplePopup.setWidget(new HTML("test"));
-				simplePopup.show();
-			}
-		}, MouseOverEvent.getType());
-	}
-
 }

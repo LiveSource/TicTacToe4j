@@ -1,11 +1,17 @@
 package com.codecamp.tictactoe.client.userFeatures;
 
 import com.codecamp.tictactoe.client.TicTacToe;
+import com.codecamp.tictactoe.client.help.HelpHint;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.DecoratedPopupPanel;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Widget;
 
 /**
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
- * series, the current Player won the game, and the system highlights the
- * winning sequence.
+ * series, the current Player wins the game, the system highlights the winning
+ * sequence and the game is over.
  * 
  * @feature
  */
@@ -41,6 +47,36 @@ public class WinningSequence {
 			GameBoard.gameGrid.setHTML(1, 1, marker);
 			GameBoard.gameGrid.setHTML(2, 2, marker);
 		}
+
+		showHelpHint();
+	}
+
+	private static void showHelpHint() {
+
+		GameBoard.gameGrid.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+
+				String helpHint = HelpHint
+						.getHelpHint("com.codecamp.tictactoe.client.userFeatures.WinningSequence");
+
+				HTML html = new HTML(helpHint);
+				html.setSize("300px", "100px");
+
+				final DecoratedPopupPanel hintPopup = new DecoratedPopupPanel(
+						true);
+				hintPopup.setSize("300px", "100px");
+				hintPopup.setWidget(html);
+
+				Widget source = (Widget) event.getSource();
+				int left = source.getAbsoluteLeft() + 10;
+				int top = source.getAbsoluteTop() + 10;
+				hintPopup.setPopupPosition(left, top);
+
+				hintPopup.show();
+			}
+		});
 	}
 
 }
