@@ -1,7 +1,7 @@
 package com.codecamp.tictactoe.client;
 
 import com.codecamp.tictactoe.client.userFeatures.PlayerMove;
-import com.codecamp.tictactoe.client.userFeatures.Win;
+import com.codecamp.tictactoe.client.userFeatures.WinningSequence;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -27,7 +27,7 @@ public class JudgeService {
 
 							TicTacToe.sequenceWinner = sequenceWinner;
 
-							Win.showWinner(currentMoveRow, currentMoveColumn,
+							WinningSequence.showWinner(currentMoveRow, currentMoveColumn,
 									sequenceWinner);
 						} else {
 
