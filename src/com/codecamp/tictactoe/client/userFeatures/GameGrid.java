@@ -2,13 +2,18 @@ package com.codecamp.tictactoe.client.userFeatures;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.MouseOverEvent;
+import com.google.gwt.event.dom.client.MouseOverHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 /**
- * A 3x3 grid of cells in which players will enter a mark to indicate their
- * desired move.
+ * 3x3 grid of cells in which players enter a mark to indicate their desired
+ * move.
  */
 public class GameGrid extends Grid {
 
@@ -32,6 +37,8 @@ public class GameGrid extends Grid {
 
 			}
 		});
+
+		showHelpHint();
 	}
 
 	private void makeMove(Cell cell) {
@@ -59,6 +66,24 @@ public class GameGrid extends Grid {
 			}
 		}
 
+	}
+
+	private void showHelpHint() {
+
+		this.addHandler(new MouseOverHandler() {
+
+			@Override
+			public void onMouseOver(MouseOverEvent event) {
+
+				Window.alert("test");
+
+				final DecoratedPopupPanel simplePopup = new DecoratedPopupPanel(
+						true);
+				simplePopup.setWidth("150px");
+				simplePopup.setWidget(new HTML("test"));
+				simplePopup.show();
+			}
+		}, MouseOverEvent.getType());
 	}
 
 }

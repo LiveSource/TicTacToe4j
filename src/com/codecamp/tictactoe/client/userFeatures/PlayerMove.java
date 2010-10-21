@@ -5,7 +5,7 @@ import com.codecamp.tictactoe.client.TicTacToe;
 import com.google.gwt.user.client.ui.HTMLTable.Cell;
 
 /**
- * Realizes a move in the game.
+ * Performs a move in the game.
  * 
  * @feature
  */
@@ -32,7 +32,7 @@ public class PlayerMove {
 	}
 
 	/**
-	 * Finds out if a cell was already selected.
+	 * The Player can select a cell only if it wasn't already selected.
 	 */
 	private static boolean cellIsEmpty(GameGrid gameGrid, Cell cell) {
 
@@ -42,10 +42,6 @@ public class PlayerMove {
 		return cellText == null;
 	}
 
-	/**
-	 * Switches between players. If X played last, it is now O's turn to plays,
-	 * and vice versa.
-	 */
 	public static void toggleCurrentPlayer() {
 
 		if (TicTacToe.currentPlayer.equals("X"))
