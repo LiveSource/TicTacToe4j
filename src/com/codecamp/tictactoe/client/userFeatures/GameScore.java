@@ -1,10 +1,12 @@
 package com.codecamp.tictactoe.client.userFeatures;
 
+
+
 /** 
-* test 
-* 
-* @TODO 
-*/
+ * Board with the total times a Player won.
+ * 
+ * @TODO 
+ */
 public class GameScore {
 
 }
