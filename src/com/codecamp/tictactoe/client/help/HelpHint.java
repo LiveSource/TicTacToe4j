@@ -13,8 +13,12 @@ public class HelpHint {
 
 		if (helpEntry != null) {
 
-			return helpEntry.getFeatureName() + " - "
-					+ helpEntry.getFeatureDescription().trim();
+			String description = helpEntry.getFeatureDescription().replaceAll(
+					"\n", " ");
+			description = description.replaceAll("\t", " ");
+
+			return helpEntry.getFeatureName() + ": \n" + description.trim();
+
 		} else {
 
 			return null;
