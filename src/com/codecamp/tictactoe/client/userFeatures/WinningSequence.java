@@ -8,28 +8,19 @@ import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
-
-
-
-
-
-
-/** 
+/**
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
- series, the current Player wins the game, the system highlights the winning
- sequence and the game is over.
-TODO: change x's to green pronto!
-TODO: change to green
+ * series, the current Player wins the game, the system highlights the winning
+ * sequence and the game is over.
  * 
- * @TODO
- * @feature 
+ * @feature
  */
 public class WinningSequence {
 
 	public static void showWinner(int currentMoveRow, int currentMoveColumn,
 			String sequenceWinner) {
 
-		String marker = "<font size=6 color=\"green\"><b>"
+		String marker = "<font size=6 color=\"red\"><b>"
 				+ TicTacToe.currentPlayer + "</b></font>";
 
 		if (sequenceWinner.equals("row")) {
