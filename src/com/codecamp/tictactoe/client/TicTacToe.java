@@ -3,8 +3,12 @@ package com.codecamp.tictactoe.client;
 import com.codecamp.tictactoe.client.help.LoadSpecificationXML;
 import com.google.gwt.core.client.EntryPoint;
 
-/**
+
+
+/** 
  * Entry point classes define <code>onModuleLoad()</code>.
+ * 
+ * @architecture 
  */
 public class TicTacToe implements EntryPoint {
 
