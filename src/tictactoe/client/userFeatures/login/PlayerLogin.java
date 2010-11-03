@@ -1,10 +1,12 @@
 package tictactoe.client.userFeatures.login;
 
+
+
 /** 
-* Test 
-* 
-* @TODO 
-*/
+ * When Player logs on with valid credentials, an empty board game is displayed. 
+ * 
+ * @TODO 
+ */
 public class PlayerLogin {
 
 }
