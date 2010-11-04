@@ -1,6 +1,6 @@
 package tictactoe.client.userInterface;
 
-import helpagile.client.visualizationWidgets.HelpHint;
+import helpagile.client.exportation.HelpHint;
 import tictactoe.client.TicTacToe;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -21,7 +21,7 @@ public class WinningSequence {
 	public static void showWinner(int currentMoveRow, int currentMoveColumn,
 			String sequenceWinner) {
 
-		String marker = "<font size=6 color=\"green\"><b>"
+		String marker = "<font size=6 color=\"red\"><b>"
 				+ TicTacToe.currentPlayer + "</b></font>";
 
 		if (sequenceWinner.equals("row")) {
