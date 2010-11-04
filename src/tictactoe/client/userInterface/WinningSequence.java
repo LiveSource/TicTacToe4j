@@ -1,6 +1,6 @@
 package tictactoe.client.userInterface;
 
-import helpagile.client.exportation.HelpHint;
+import helpagile.client.visualizationWidgets.HelpHint;
 import tictactoe.client.TicTacToe;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -9,17 +9,12 @@ import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
-
-
-/** 
+/**
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
- series, the current Player wins the game, the system highlights the winning
- sequence and the game is over.
-TODO: change highlight from red to green
-TODO: remove presentation (HTML) stuff from this class
+ * series, the current Player wins the game, the system highlights the winning
+ * sequence and the game is over.
  * 
- * @TODO
- * @feature 
+ * @feature
  */
 public class WinningSequence {
 
