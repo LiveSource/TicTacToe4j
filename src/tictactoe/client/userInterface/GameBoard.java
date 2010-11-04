@@ -1,6 +1,6 @@
 package tictactoe.client.userInterface;
 
-import helpagile.client.visualizationWidgets.HelpHint;
+import helpagile.client.exportation.HelpHint;
 
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;

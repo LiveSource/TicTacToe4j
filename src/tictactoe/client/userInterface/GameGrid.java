@@ -1,6 +1,6 @@
 package tictactoe.client.userInterface;
 
-import helpagile.client.visualizationWidgets.HelpHint;
+import helpagile.client.exportation.HelpHint;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
