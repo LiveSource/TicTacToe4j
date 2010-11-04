@@ -1,15 +1,13 @@
 package tictactoe.client;
 
-import helpagile.client.HelpAgile;
+import helpagile.client.HelpAgileExport;
 
 import com.google.gwt.core.client.EntryPoint;
 
-
-
-/** 
+/**
  * Entry point classes define <code>onModuleLoad()</code>.
  * 
- * @architecture 
+ * @architecture
  */
 public class TicTacToe implements EntryPoint {
 
@@ -19,7 +17,7 @@ public class TicTacToe implements EntryPoint {
 
 	public void onModuleLoad() {
 
-		HelpAgile.initHelp("/help/TicTacToe_Specification.xml");
+		HelpAgileExport.initHelp("TicTacToe_Specification.xml");
 
 		new GameInitialization();
 	}
