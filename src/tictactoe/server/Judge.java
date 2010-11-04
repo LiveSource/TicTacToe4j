@@ -1,5 +1,11 @@
 package tictactoe.server;
 
+/** 
+ * 
+ * 
+ * @entity 
+ */
+
 public class Judge {
 
 	public static String checkForWinner(String[][] gameStatus,
