@@ -3,6 +3,7 @@
 	<entry feature="false" specification="false">
 		<className></className>
 		<classPath></classPath>
+		<featurePath></featurePath>
 		<featureName>Tic Tac Toe</featureName>
 		<featureDescription></featureDescription>
 		<methods />
@@ -10,6 +11,7 @@
 	<entry feature="false" specification="false">
 		<className>GameInitialization</className>
 		<classPath>tictactoe.client</classPath>
+		<featurePath></featurePath>
 		<featureName>Game Initialization</featureName>
 		<featureDescription></featureDescription>
 		<methods />
@@ -17,6 +19,7 @@
 	<entry feature="false" specification="false">
 		<className>GreetingService</className>
 		<classPath>tictactoe.client</classPath>
+		<featurePath></featurePath>
 		<featureName>Greeting Service</featureName>
 		<featureDescription>The client side stub for the RPC service.
 		</featureDescription>
@@ -30,6 +33,7 @@
 	<entry feature="false" specification="false">
 		<className>GreetingServiceAsync</className>
 		<classPath>tictactoe.client</classPath>
+		<featurePath></featurePath>
 		<featureName>Greeting Service Async</featureName>
 		<featureDescription>
 			The async counterpart of
@@ -46,6 +50,7 @@
 	<entry feature="false" specification="false">
 		<className>JudgeService</className>
 		<classPath>tictactoe.client</classPath>
+		<featurePath></featurePath>
 		<featureName>Judge Service</featureName>
 		<featureDescription></featureDescription>
 		<methods>
@@ -58,6 +63,7 @@
 	<entry feature="false" specification="false">
 		<className>TicTacToe</className>
 		<classPath>tictactoe.client</classPath>
+		<featurePath></featurePath>
 		<featureName>Tic Tac Toe</featureName>
 		<featureDescription>
 			Entry point classes define
@@ -73,7 +79,8 @@
 	</entry>
 	<entry feature="false" specification="true">
 		<className>GameBoard</className>
-		<classPath>tictactoe.client.userFeatures</classPath>
+		<classPath>tictactoe.client.userInterface</classPath>
+		<featurePath></featurePath>
 		<featureName>Game Board</featureName>
 		<featureDescription>The web page where the game is shown. Accommodates
 			the game grid and also
@@ -83,7 +90,8 @@
 	</entry>
 	<entry feature="false" specification="true">
 		<className>GameGrid</className>
-		<classPath>tictactoe.client.userFeatures</classPath>
+		<classPath>tictactoe.client.userInterface</classPath>
+		<featurePath></featurePath>
 		<featureName>Game Grid</featureName>
 		<featureDescription>3x3 grid of cells in which players enter a mark to
 			indicate their desired
@@ -101,7 +109,8 @@
 	</entry>
 	<entry feature="true" specification="true">
 		<className>PlayerMove</className>
-		<classPath>tictactoe.client.userFeatures</classPath>
+		<classPath>tictactoe.client.userInterface</classPath>
+		<featurePath></featurePath>
 		<featureName>Player Move</featureName>
 		<featureDescription>Performs a move in the game.</featureDescription>
 		<methods>
@@ -124,7 +133,8 @@
 	</entry>
 	<entry feature="true" specification="true">
 		<className>WinningSequence</className>
-		<classPath>tictactoe.client.userFeatures</classPath>
+		<classPath>tictactoe.client.userInterface</classPath>
+		<featurePath></featurePath>
 		<featureName>Winning Sequence</featureName>
 		<featureDescription>If there is three consecutive marks in a
 			horizontal, vertical, or diagonal
@@ -144,6 +154,7 @@
 	<entry feature="false" specification="false">
 		<className>GreetingServiceImpl</className>
 		<classPath>tictactoe.server</classPath>
+		<featurePath></featurePath>
 		<featureName>Greeting Service Impl</featureName>
 		<featureDescription>The server side implementation of the RPC service.
 		</featureDescription>
@@ -157,6 +168,7 @@
 	<entry feature="false" specification="false">
 		<className>Judge</className>
 		<classPath>tictactoe.server</classPath>
+		<featurePath></featurePath>
 		<featureName>Judge</featureName>
 		<featureDescription></featureDescription>
 		<methods>
