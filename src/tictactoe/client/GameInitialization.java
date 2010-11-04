@@ -1,6 +1,6 @@
 package tictactoe.client;
 
-import tictactoe.client.userFeatures.GameBoard;
+import tictactoe.client.userInterface.GameBoard;
 import helpagile.client.visualizationWidgets.HelpIcon;
 
 import com.google.gwt.user.client.ui.RootPanel;

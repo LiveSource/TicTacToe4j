@@ -1,7 +1,7 @@
 package tictactoe.client;
 
-import tictactoe.client.userFeatures.PlayerMove;
-import tictactoe.client.userFeatures.WinningSequence;
+import tictactoe.client.userInterface.PlayerMove;
+import tictactoe.client.userInterface.WinningSequence;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
