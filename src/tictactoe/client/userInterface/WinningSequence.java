@@ -60,7 +60,7 @@ public class WinningSequence {
 			public void onClick(ClickEvent event) {
 
 				String helpHint = HelpHint
-						.getHelpHint("com.codecamp.tictactoe.client.userFeatures.WinningSequence");
+						.getHelpHint("tictactoe.client.userInterface.WinningSequence");
 
 				HTML html = new HTML(helpHint);
 				html.setSize("300px", "100px");
