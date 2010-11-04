@@ -1,7 +1,9 @@
 package tictactoe.server;
 
+
+
 /** 
- * 
+ * Define all the rules to identify the winner of the game.
  * 
  * @entity 
  */
