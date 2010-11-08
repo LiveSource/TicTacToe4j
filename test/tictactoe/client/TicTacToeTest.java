@@ -1,25 +1,23 @@
 package tictactoe.client;
 
-import junit.framework.TestCase;
-import tictactoe.client.TicTacToe;
+import com.google.gwt.junit.client.GWTTestCase;
 
 /**
- * Test Class: TicTacToe.
- * Entry point classes define <code>onModuleLoad()</code>.
- *
+ * Test Class: TicTacToe. Entry point classes define <code>onModuleLoad()</code>
+ * .
+ * 
  */
-public class TicTacToeTest extends TestCase {
+public class TicTacToeTest extends GWTTestCase {
 
-	public void testTicTacToe() { 
+	@Override
+	public String getModuleName() {
 
-		// new TicTacToe();
-
-		assertTrue(true);
+		return "tictactoe.TicTacToe";
 	}
 
-	public void testOnModuleLoad() { 
+	public void testOnModuleLoad() {
 
-		// new TicTacToe().onModuleLoad();
+		new TicTacToe().onModuleLoad();
 
 		assertTrue(true);
 	}
