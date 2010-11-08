@@ -1,33 +1,26 @@
 package tictactoe.server;
 
 import junit.framework.TestCase;
-import tictactoe.server.GreetingServiceImpl;
 
 /**
- * Test Class: GreetingServiceImpl.
- * The server side implementation of the RPC service.
- *
+ * Test Class: GreetingServiceImpl. The server side implementation of the RPC
+ * service.
+ * 
  */
 public class GreetingServiceImplTest extends TestCase {
 
-	public void testGreetingServiceImpl() { 
+	public void testCheckForWinner() {
 
-		// new GreetingServiceImpl();
+		String[][] gameStatus = new String[3][3];
 
-		assertTrue(true);
-	}
+		int currentMoveRow = 2;
 
-	public void testCheckForWinner() { 
+		int currentMoveColumn = 1;
 
-		// String gameStatus;
+		String checkForWinnerTested = new GreetingServiceImpl().checkForWinner(
+				gameStatus, currentMoveRow, currentMoveColumn);
 
-		//  int currentMoveRow;
-
-		//  int currentMoveColumn;
-
-		// String checkForWinnerTested = new GreetingServiceImpl().checkForWinner(gameStatus,currentMoveRow,currentMoveColumn);
-
-		// assertEquals(checkForWinnerTested, null);
+		assertEquals(checkForWinnerTested, null);
 	}
 
 }
