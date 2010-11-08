@@ -1,19 +1,24 @@
 package tictactoe.client.userInterface;
 
-import junit.framework.TestCase;
-import tictactoe.client.userInterface.GameBoard;
+import com.google.gwt.junit.client.GWTTestCase;
 
 /**
- * Test Class: GameBoard.
- * The web page where the game is shown. Accommodates the game grid and also
- some options such as a restart button, help, game score, game status, ...
- *
+ * Test Class: GameBoard. The web page where the game is shown. Accommodates the
+ * game grid and also some options such as a restart button, help, game score,
+ * game status, ...
+ * 
  */
-public class GameBoardTest extends TestCase {
+public class GameBoardTest extends GWTTestCase {
 
-	public void testGameBoard() { 
+	@Override
+	public String getModuleName() {
 
-		// new GameBoard();
+		return "tictactoe.TicTacToe";
+	}
+
+	public void testGameBoard() {
+
+		new GameBoard();
 
 		assertTrue(true);
 	}
