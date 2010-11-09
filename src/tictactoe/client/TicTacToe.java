@@ -14,8 +14,11 @@ import com.google.gwt.user.client.Window;
  */
 public class TicTacToe implements EntryPoint {
 
+	public static final String Player_X = "X";
+	public static final String Player_O = "O";
+
 	public static String[][] currentGame = new String[3][3];
-	public static String currentPlayer = "X";
+	public static String currentPlayer = Player_X;
 	public static String sequenceWinner = null;
 
 	public void onModuleLoad() {
