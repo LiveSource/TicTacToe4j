@@ -1,33 +1,56 @@
 package tictactoe.server;
 
 import junit.framework.TestCase;
-import tictactoe.server.Judge;
+import tictactoe.client.TicTacToe;
 
 /**
- * Test Class: Judge.
- * Define all the rules to identify the winner of the game.
- *
+ * Test Class: Judge. Define all the rules to identify the winner of the game.
+ * 
  */
 public class JudgeTest extends TestCase {
 
-	public void testJudge() { 
+	private String[][] defineGameStatus() {
 
-		// new Judge();
+		String[][] gameStatus = new String[3][3];
 
-		assertTrue(true);
+		gameStatus[0][0] = TicTacToe.Player_X;
+		gameStatus[0][1] = TicTacToe.Player_O;
+
+		gameStatus[1][1] = TicTacToe.Player_X;
+
+		return gameStatus;
 	}
 
-	public void testCheckForWinner() { 
+	public void testCheckForWinner_Loose() {
 
-		// String gameStatus;
+		int currentMoveRow = 1;
 
-		//  int currentMoveRow;
+		int currentMoveColumn = 2;
 
-		//  int currentMoveColumn;
+		String[][] gameStatus = defineGameStatus();
 
-		// String checkForWinnerTested = Judge.checkForWinner(gameStatus,currentMoveRow,currentMoveColumn);
+		gameStatus[currentMoveRow][currentMoveColumn] = TicTacToe.Player_O;
 
-// 		assertEquals(checkForWinnerTested, null);
+		String checkForWinnerTested = Judge.checkForWinner(defineGameStatus(),
+				currentMoveRow, currentMoveColumn);
+
+		assertEquals(checkForWinnerTested, null);
+	}
+
+	public void testCheckForWinner_Win() {
+
+		String[][] gameStatus = defineGameStatus();
+
+		int currentMoveRow = 2;
+
+		int currentMoveColumn = 2;
+
+		gameStatus[currentMoveRow][currentMoveColumn] = TicTacToe.Player_X;
+
+		String checkForWinnerTested = Judge.checkForWinner(gameStatus,
+				currentMoveRow, currentMoveColumn);
+
+		assertEquals(checkForWinnerTested, Judge.DIAGONAL_LEFT);
 	}
 
 }
