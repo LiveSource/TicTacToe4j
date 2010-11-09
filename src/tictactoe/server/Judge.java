@@ -1,14 +1,17 @@
 package tictactoe.server;
 
-
-
-/** 
+/**
  * Define all the rules to identify the winner of the game.
  * 
- * @entity 
+ * @entity
  */
 
 public class Judge {
+
+	public static final String ROW = "row";
+	public static final String COLUMN = "column";
+	public static final String DIAGONAL_RIGHT = "diagonalRight";
+	public static final String DIAGONAL_LEFT = "diagonalLeft";
 
 	public static String checkForWinner(String[][] gameStatus,
 			int currentMoveRow, int currentMoveColumn) {
@@ -17,22 +20,25 @@ public class Judge {
 
 		String currentPlayer = gameStatus[currentMoveRow][currentMoveColumn];
 
-		if (checkWinnerRow(gameStatus, currentPlayer, currentMoveRow)) {
+		if (currentPlayer != null) {
 
-			sequenceWinner = "row";
+			if (checkWinnerRow(gameStatus, currentPlayer, currentMoveRow)) {
 
-		} else if (checkWinnerColumn(gameStatus, currentPlayer,
-				currentMoveColumn)) {
+				sequenceWinner = ROW;
 
-			sequenceWinner = "column";
+			} else if (checkWinnerColumn(gameStatus, currentPlayer,
+					currentMoveColumn)) {
 
-		} else if (checkWinnerDiagonalRight(gameStatus, currentPlayer)) {
+				sequenceWinner = COLUMN;
 
-			sequenceWinner = "diagonalRight";
+			} else if (checkWinnerDiagonalRight(gameStatus, currentPlayer)) {
 
-		} else if (checkWinnerDiagonalLeft(gameStatus, currentPlayer)) {
+				sequenceWinner = DIAGONAL_RIGHT;
 
-			sequenceWinner = "diagonalLeft";
+			} else if (checkWinnerDiagonalLeft(gameStatus, currentPlayer)) {
+
+				sequenceWinner = DIAGONAL_LEFT;
+			}
 		}
 
 		return sequenceWinner;
