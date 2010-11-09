@@ -18,31 +18,36 @@ import com.google.gwt.user.client.ui.Widget;
  */
 public class WinningSequence {
 
+	public static final String ROW = "row";
+	public static final String COLUMN = "column";
+	public static final String DIAGONAL_RIGHT = "diagonalRight";
+	public static final String DIAGONAL_LEFT = "diagonalLeft";
+
 	public static void showWinner(int currentMoveRow, int currentMoveColumn,
 			String sequenceWinner) {
 
-		String marker = "<font size=6 color=\"green\"><b>"
+		String marker = "<font size=6 color=\"red\"><b>"
 				+ TicTacToe.currentPlayer + "</b></font>";
 
-		if (sequenceWinner.equals("row")) {
+		if (sequenceWinner.equals(ROW)) {
 
 			GameBoard.gameGrid.setHTML(currentMoveRow, 0, marker);
 			GameBoard.gameGrid.setHTML(currentMoveRow, 1, marker);
 			GameBoard.gameGrid.setHTML(currentMoveRow, 2, marker);
 
-		} else if (sequenceWinner.equals("column")) {
+		} else if (sequenceWinner.equals(COLUMN)) {
 
 			GameBoard.gameGrid.setHTML(0, currentMoveColumn, marker);
 			GameBoard.gameGrid.setHTML(1, currentMoveColumn, marker);
 			GameBoard.gameGrid.setHTML(2, currentMoveColumn, marker);
 
-		} else if (sequenceWinner.equals("diagonalRight")) {
+		} else if (sequenceWinner.equals(DIAGONAL_RIGHT)) {
 
 			GameBoard.gameGrid.setHTML(0, 2, marker);
 			GameBoard.gameGrid.setHTML(1, 1, marker);
 			GameBoard.gameGrid.setHTML(2, 0, marker);
 
-		} else if (sequenceWinner.equals("diagonalLeft")) {
+		} else if (sequenceWinner.equals(DIAGONAL_LEFT)) {
 
 			GameBoard.gameGrid.setHTML(0, 0, marker);
 			GameBoard.gameGrid.setHTML(1, 1, marker);
