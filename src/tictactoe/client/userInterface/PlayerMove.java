@@ -45,11 +45,11 @@ public class PlayerMove {
 
 	public static void toggleCurrentPlayer() {
 
-		if (TicTacToe.currentPlayer.equals("X"))
-			TicTacToe.currentPlayer = "O";
+		if (TicTacToe.currentPlayer.equals(TicTacToe.Player_X))
+			TicTacToe.currentPlayer = TicTacToe.Player_O;
 
-		else if (TicTacToe.currentPlayer.equals("O"))
-			TicTacToe.currentPlayer = "X";
+		else if (TicTacToe.currentPlayer.equals(TicTacToe.Player_O))
+			TicTacToe.currentPlayer = TicTacToe.Player_X;
 	}
 
 }
