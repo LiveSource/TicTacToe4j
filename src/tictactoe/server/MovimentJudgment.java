@@ -1,12 +1,11 @@
 package tictactoe.server;
 
 /**
- * Define all the rules to identify the winner of the game.
+ * Checks if the player movement ran a winning sequence or not.
  * 
  * @entity
  */
-
-public class Judge {
+public class MovimentJudgment {
 
 	public static final String ROW = "row";
 	public static final String COLUMN = "column";

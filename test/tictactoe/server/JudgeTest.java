@@ -31,7 +31,7 @@ public class JudgeTest extends TestCase {
 
 		gameStatus[currentMoveRow][currentMoveColumn] = TicTacToe.Player_O;
 
-		String checkForWinnerTested = Judge.checkForWinner(defineGameStatus(),
+		String checkForWinnerTested = MovimentJudgment.checkForWinner(defineGameStatus(),
 				currentMoveRow, currentMoveColumn);
 
 		assertEquals(checkForWinnerTested, null);
@@ -47,10 +47,10 @@ public class JudgeTest extends TestCase {
 
 		gameStatus[currentMoveRow][currentMoveColumn] = TicTacToe.Player_X;
 
-		String checkForWinnerTested = Judge.checkForWinner(gameStatus,
+		String checkForWinnerTested = MovimentJudgment.checkForWinner(gameStatus,
 				currentMoveRow, currentMoveColumn);
 
-		assertEquals(checkForWinnerTested, Judge.DIAGONAL_LEFT);
+		assertEquals(checkForWinnerTested, MovimentJudgment.DIAGONAL_LEFT);
 	}
 
 }

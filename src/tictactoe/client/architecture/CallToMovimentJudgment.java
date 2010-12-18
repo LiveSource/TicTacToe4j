@@ -1,5 +1,6 @@
-package tictactoe.client;
+package tictactoe.client.architecture;
 
+import tictactoe.client.TicTacToe;
 import tictactoe.client.userInterface.PlayerMove;
 import tictactoe.client.userInterface.WinningSequence;
 
@@ -7,7 +8,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-public class JudgeService {
+public class CallToMovimentJudgment {
 
 	/**
 	 * Create a remote service proxy to talk to the server-side Greeting

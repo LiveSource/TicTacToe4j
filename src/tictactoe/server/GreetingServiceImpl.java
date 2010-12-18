@@ -1,6 +1,6 @@
 package tictactoe.server;
 
-import tictactoe.client.GreetingService;
+import tictactoe.client.architecture.GreetingService;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -19,7 +19,7 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 	public String checkForWinner(String[][] gameStatus, int currentMoveRow,
 			int currentMoveColumn) {
 
-		return Judge.checkForWinner(gameStatus, currentMoveRow,
+		return MovimentJudgment.checkForWinner(gameStatus, currentMoveRow,
 				currentMoveColumn);
 	}
 

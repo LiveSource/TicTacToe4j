@@ -1,7 +1,7 @@
 package tictactoe.authentication.client;
 
 /**
- * Insert user authentication and login into the game.
+ * Form to identify the name and the password of the player.
  * 
  */
 public class Login {

@@ -1,4 +1,4 @@
-package tictactoe.client;
+package tictactoe.client.architecture;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

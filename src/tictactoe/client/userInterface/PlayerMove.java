@@ -1,7 +1,7 @@
 package tictactoe.client.userInterface;
 
-import tictactoe.client.JudgeService;
 import tictactoe.client.TicTacToe;
+import tictactoe.client.architecture.CallToMovimentJudgment;
 
 import com.google.gwt.user.client.ui.HTMLTable.Cell;
 
@@ -27,7 +27,7 @@ public class PlayerMove {
 
 			TicTacToe.currentGame[cell.getRowIndex()][cell.getCellIndex()] = TicTacToe.currentPlayer;
 
-			JudgeService.checkForWinner(TicTacToe.currentGame,
+			CallToMovimentJudgment.checkForWinner(TicTacToe.currentGame,
 					cell.getRowIndex(), cell.getCellIndex());
 		}
 	}
