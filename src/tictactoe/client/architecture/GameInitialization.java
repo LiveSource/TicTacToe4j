@@ -15,7 +15,7 @@ public class GameInitialization {
 	public GameInitialization() {
 
 		RootPanel.get("gameBoardHtmlTagId").add(
-				new HelpIcon("TicTacToe_Specification.xml"));
+				new HelpIcon("TicTacToe"));
 
 		RootPanel.get("gameBoardHtmlTagId").add(new GameBoard());
 	}

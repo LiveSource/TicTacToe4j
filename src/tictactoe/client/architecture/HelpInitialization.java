@@ -1,6 +1,7 @@
 package tictactoe.client.architecture;
 
 import helpagile.client.HelpAgileExport;
+import helpagile.client.utilities.ConvertSpecificationXML;
 import helpagile.client.utilities.LoadSpecificationXML;
 
 import com.google.gwt.http.client.Request;
@@ -21,7 +22,8 @@ public class HelpInitialization {
 
 			public void onResponseReceived(Request request, Response response) {
 
-				LoadSpecificationXML.convertHelpEntries(response.getText());
+				ConvertSpecificationXML.convertHelpEntries(response
+						.getText());
 
 				new GameInitialization();
 			}
@@ -35,7 +37,7 @@ public class HelpInitialization {
 		};
 
 		HelpAgileExport
-				.initHelp("TicTacToe_Specification.xml", requestCallback);
+				.initHelp("TicTacToe", requestCallback);
 
 	}
 }
