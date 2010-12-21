@@ -1,55 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	<projectName>Tic Tac Toe</projectName>
-	<projectDescription></projectDescription>
+	<projectDomain>tictactoe</projectDomain>
+	<projectDescription>&lt;b&gt;Tic-tac-toe&lt;/b&gt;, also spelled
+		&lt;b&gt;tick tack toe&lt;/b&gt;, or &lt;b&gt;noughts and
+		crosses&lt;/b&gt; as it is known in the UK, Ireland, Australia, New
+		Zealand, is a pencil-and-paper game for two players,
+		&lt;b&gt;O&lt;/b&gt; and &lt;b&gt;X&lt;/b&gt;, who take turns marking
+		the spaces in a 3�3 grid, usually &lt;b&gt;X&lt;/b&gt; going first.
+		The player who succeeds in placing three respective marks in a
+		horizontal, vertical, or diagonal row wins the game.
+	</projectDescription>
 	<projectComponents>
-		<projectComponent componentName="Authentication">
+		<projectComponent componentName="Authentication"
+			componentPath="authentication/client">
 			<entries>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Authentication</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="true">
+				<entry featureType="">
 					<className>Login</className>
-					<classPath>tictactoe.authentication.client</classPath>
+					<classPath>authentication/client</classPath>
 					<featurePath></featurePath>
 					<featureName>Login</featureName>
-					<featureDescription>Insert user authentication and login into the
-						game.</featureDescription>
+					<featureDescription>Form to identify the name and the password of
+						the player.</featureDescription>
 					<methods />
 				</entry>
-				<entry feature="false" specification="true">
+				<entry featureType="">
 					<className>Logout</className>
-					<classPath>tictactoe.authentication.client</classPath>
+					<classPath>authentication/client</classPath>
 					<featurePath></featurePath>
 					<featureName>Logout</featureName>
-					<featureDescription></featureDescription>
+					<featureDescription>Link to a safe exit from the game.
+					</featureDescription>
 					<methods />
 				</entry>
-				<entry feature="false" specification="false">
+			</entries>
+		</projectComponent>
+		<projectComponent componentName="Gaming"
+			componentPath="client">
+			<entries>
+				<entry featureType="entity">
+					<className>Player</className>
+					<classPath>client</classPath>
+					<featurePath></featurePath>
+					<featureName>Player</featureName>
+					<featureDescription>Information about each player of the game.
+					</featureDescription>
+					<methods />
+				</entry>
+				<entry featureType="architecture">
+					<className>TicTacToe</className>
+					<classPath>client</classPath>
+					<featurePath></featurePath>
+					<featureName>Tic Tac Toe</featureName>
+					<featureDescription>Anchor class to init the system by the Google
+						Web Toolkit (EntryPoint).</featureDescription>
+					<methods>
+						<method>
+							<methodName>onModuleLoad</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+				</entry>
+				<entry featureType="">
+					<className>CallToMovimentJudgment</className>
+					<classPath>client/architecture</classPath>
+					<featurePath>architecture</featurePath>
+					<featureName>Call To Moviment Judgment</featureName>
+					<featureDescription></featureDescription>
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+				</entry>
+				<entry featureType="architecture">
 					<className>GameInitialization</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
+					<classPath>client/architecture</classPath>
+					<featurePath>architecture</featurePath>
 					<featureName>Game Initialization</featureName>
-					<featureDescription></featureDescription>
+					<featureDescription>System preparation for the game initialization.
+					</featureDescription>
 					<methods />
 				</entry>
-				<entry feature="false" specification="false">
+				<entry featureType="">
 					<className>GreetingService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
+					<classPath>client/architecture</classPath>
+					<featurePath>architecture</featurePath>
 					<featureName>Greeting Service</featureName>
 					<featureDescription>The client side stub for the RPC service.
 					</featureDescription>
@@ -60,16 +97,13 @@
 						</method>
 					</methods>
 				</entry>
-				<entry feature="false" specification="false">
+				<entry featureType="architecture">
 					<className>GreetingServiceAsync</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
+					<classPath>client/architecture</classPath>
+					<featurePath>architecture</featurePath>
 					<featureName>Greeting Service Async</featureName>
-					<featureDescription>
-						The async counterpart of
-						<code>GreetingService</code>
-						.
-					</featureDescription>
+					<featureDescription>The async counterpart of
+						&lt;code&gt;GreetingService&lt;/code&gt;.</featureDescription>
 					<methods>
 						<method>
 							<methodName>checkForWinner</methodName>
@@ -77,53 +111,19 @@
 						</method>
 					</methods>
 				</entry>
-				<entry feature="false" specification="false">
-					<className>JudgeService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Judge Service</featureName>
-					<featureDescription></featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Player</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Player</featureName>
-					<featureDescription>Information about each player of the game.
+				<entry featureType="architecture">
+					<className>HelpInitialization</className>
+					<classPath>client/architecture</classPath>
+					<featurePath>architecture</featurePath>
+					<featureName>Help Initialization</featureName>
+					<featureDescription>Loading the contents of the help system.
 					</featureDescription>
 					<methods />
 				</entry>
-				<entry feature="false" specification="false">
-					<className>TicTacToe</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription>
-						Entry point classes define
-						<code>onModuleLoad()</code>
-						.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>onModuleLoad</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>initHelp</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
+				<entry featureType="">
 					<className>GameBoard</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
+					<classPath>client/userInterface</classPath>
+					<featurePath>userInterface</featurePath>
 					<featureName>Game Board</featureName>
 					<featureDescription>The web page where the game is shown.
 						Accommodates the game grid and also
@@ -131,10 +131,10 @@
 						...</featureDescription>
 					<methods />
 				</entry>
-				<entry feature="false" specification="false">
+				<entry featureType="">
 					<className>GameGrid</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
+					<classPath>client/userInterface</classPath>
+					<featurePath>userInterface</featurePath>
 					<featureName>Game Grid</featureName>
 					<featureDescription>3x3 grid of cells in which players enter a mark
 						to indicate their desired
@@ -150,10 +150,10 @@
 						</method>
 					</methods>
 				</entry>
-				<entry feature="true" specification="false">
+				<entry featureType="feature">
 					<className>PlayerMove</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
+					<classPath>client/userInterface</classPath>
+					<featurePath>userInterface</featurePath>
 					<featureName>Player Move</featureName>
 					<featureDescription>Performs a move in the game.
 					</featureDescription>
@@ -175,10 +175,19 @@
 						</method>
 					</methods>
 				</entry>
-				<entry feature="true" specification="false">
+				<entry featureType="">
+					<className>Timer</className>
+					<classPath>client/userInterface</classPath>
+					<featurePath>userInterface</featurePath>
+					<featureName>Timer</featureName>
+					<featureDescription>Counts the time passed since the current game
+						started.</featureDescription>
+					<methods />
+				</entry>
+				<entry featureType="feature">
 					<className>WinningSequence</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
+					<classPath>client/userInterface</classPath>
+					<featurePath>userInterface</featurePath>
 					<featureName>Winning Sequence</featureName>
 					<featureDescription>If there is three consecutive marks in a
 						horizontal, vertical, or diagonal
@@ -192,252 +201,18 @@
 						</method>
 						<method>
 							<methodName>showHelpHint</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GreetingServiceImpl</className>
-					<classPath>tictactoe.server</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service Impl</featureName>
-					<featureDescription>The server side implementation of the RPC
-						service.</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Judge</className>
-					<classPath>tictactoe.server</classPath>
-					<featurePath></featurePath>
-					<featureName>Judge</featureName>
-					<featureDescription>Define all the rules to identify the winner of
-						the game.</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerRow</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerColumn</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerDiagonalRight</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerDiagonalLeft</methodName>
 							<methodDescription></methodDescription>
 						</method>
 					</methods>
 				</entry>
 			</entries>
 		</projectComponent>
-		<projectComponent componentName="Game Client">
+		<projectComponent componentName="Infra Structure"
+			componentPath="server">
 			<entries>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Authentication</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Login</className>
-					<classPath>tictactoe.authentication.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Login</featureName>
-					<featureDescription>Insert user authentication and login into the
-						game.</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Logout</className>
-					<classPath>tictactoe.authentication.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Logout</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GameInitialization</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Game Initialization</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GreetingService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service</featureName>
-					<featureDescription>The client side stub for the RPC service.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GreetingServiceAsync</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service Async</featureName>
-					<featureDescription>
-						The async counterpart of
-						<code>GreetingService</code>
-						.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>JudgeService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Judge Service</featureName>
-					<featureDescription></featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>Player</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Player</featureName>
-					<featureDescription>Information about each player of the game.
-					</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="true">
-					<className>TicTacToe</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription>
-						Entry point classes define
-						<code>onModuleLoad()</code>
-						.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>onModuleLoad</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>initHelp</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GameBoard</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath>userInterface</featurePath>
-					<featureName>Game Board</featureName>
-					<featureDescription>The web page where the game is shown.
-						Accommodates the game grid and also
-						some options such as a restart button, help, game score, game status,
-						...</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GameGrid</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath>userInterface</featurePath>
-					<featureName>Game Grid</featureName>
-					<featureDescription>3x3 grid of cells in which players enter a mark
-						to indicate their desired
-						move.</featureDescription>
-					<methods>
-						<method>
-							<methodName>makeMove</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>formatGridCells</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="true" specification="true">
-					<className>PlayerMove</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath>userInterface</featurePath>
-					<featureName>Player Move</featureName>
-					<featureDescription>Performs a move in the game.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>makeMove</methodName>
-							<methodDescription>When the player clicks in a cell, the game
-								draws an O or a X on the game
-								grid depending on which player's turn it is.</methodDescription>
-						</method>
-						<method>
-							<methodName>cellIsEmpty</methodName>
-							<methodDescription>The Player can select a cell only if it wasn't
-								already selected.</methodDescription>
-						</method>
-						<method>
-							<methodName>toggleCurrentPlayer</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="true" specification="true">
-					<className>WinningSequence</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath>userInterface</featurePath>
-					<featureName>Winning Sequence</featureName>
-					<featureDescription>If there is three consecutive marks in a
-						horizontal, vertical, or diagonal
-						series, the current Player wins the game, the system highlights the
-						winning
-						sequence and the game is over.</featureDescription>
-					<methods>
-						<method>
-							<methodName>showWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>showHelpHint</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
+				<entry featureType="architecture">
 					<className>GreetingServiceImpl</className>
-					<classPath>tictactoe.server</classPath>
+					<classPath>server</classPath>
 					<featurePath></featurePath>
 					<featureName>Greeting Service Impl</featureName>
 					<featureDescription>The server side implementation of the RPC
@@ -449,252 +224,13 @@
 						</method>
 					</methods>
 				</entry>
-				<entry feature="false" specification="false">
-					<className>Judge</className>
-					<classPath>tictactoe.server</classPath>
+				<entry featureType="entity">
+					<className>MovimentJudgment</className>
+					<classPath>server</classPath>
 					<featurePath></featurePath>
-					<featureName>Judge</featureName>
-					<featureDescription>Define all the rules to identify the winner of
-						the game.</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerRow</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerColumn</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerDiagonalRight</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>checkWinnerDiagonalLeft</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-			</entries>
-		</projectComponent>
-		<projectComponent componentName="Server Side">
-			<entries>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className></className>
-					<classPath></classPath>
-					<featurePath></featurePath>
-					<featureName>Authentication</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Login</className>
-					<classPath>tictactoe.authentication.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Login</featureName>
-					<featureDescription>Insert user authentication and login into the
-						game.</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Logout</className>
-					<classPath>tictactoe.authentication.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Logout</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GameInitialization</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Game Initialization</featureName>
-					<featureDescription></featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GreetingService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service</featureName>
-					<featureDescription>The client side stub for the RPC service.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GreetingServiceAsync</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service Async</featureName>
-					<featureDescription>
-						The async counterpart of
-						<code>GreetingService</code>
-						.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>JudgeService</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Judge Service</featureName>
-					<featureDescription></featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>Player</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Player</featureName>
-					<featureDescription>Information about each player of the game.
-					</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>TicTacToe</className>
-					<classPath>tictactoe.client</classPath>
-					<featurePath></featurePath>
-					<featureName>Tic Tac Toe</featureName>
-					<featureDescription>
-						Entry point classes define
-						<code>onModuleLoad()</code>
-						.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>onModuleLoad</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>initHelp</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GameBoard</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
-					<featureName>Game Board</featureName>
-					<featureDescription>The web page where the game is shown.
-						Accommodates the game grid and also
-						some options such as a restart button, help, game score, game status,
-						...</featureDescription>
-					<methods />
-				</entry>
-				<entry feature="false" specification="false">
-					<className>GameGrid</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
-					<featureName>Game Grid</featureName>
-					<featureDescription>3x3 grid of cells in which players enter a mark
-						to indicate their desired
-						move.</featureDescription>
-					<methods>
-						<method>
-							<methodName>makeMove</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>formatGridCells</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="true" specification="false">
-					<className>PlayerMove</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
-					<featureName>Player Move</featureName>
-					<featureDescription>Performs a move in the game.
-					</featureDescription>
-					<methods>
-						<method>
-							<methodName>makeMove</methodName>
-							<methodDescription>When the player clicks in a cell, the game
-								draws an O or a X on the game
-								grid depending on which player's turn it is.</methodDescription>
-						</method>
-						<method>
-							<methodName>cellIsEmpty</methodName>
-							<methodDescription>The Player can select a cell only if it wasn't
-								already selected.</methodDescription>
-						</method>
-						<method>
-							<methodName>toggleCurrentPlayer</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="true" specification="false">
-					<className>WinningSequence</className>
-					<classPath>tictactoe.client.userInterface</classPath>
-					<featurePath></featurePath>
-					<featureName>Winning Sequence</featureName>
-					<featureDescription>If there is three consecutive marks in a
-						horizontal, vertical, or diagonal
-						series, the current Player wins the game, the system highlights the
-						winning
-						sequence and the game is over.</featureDescription>
-					<methods>
-						<method>
-							<methodName>showWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-						<method>
-							<methodName>showHelpHint</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>GreetingServiceImpl</className>
-					<classPath>tictactoe.server</classPath>
-					<featurePath></featurePath>
-					<featureName>Greeting Service Impl</featureName>
-					<featureDescription>The server side implementation of the RPC
-						service.</featureDescription>
-					<methods>
-						<method>
-							<methodName>checkForWinner</methodName>
-							<methodDescription></methodDescription>
-						</method>
-					</methods>
-				</entry>
-				<entry feature="false" specification="true">
-					<className>Judge</className>
-					<classPath>tictactoe.server</classPath>
-					<featurePath></featurePath>
-					<featureName>Judge</featureName>
-					<featureDescription>Define all the rules to identify the winner of
-						the game.</featureDescription>
+					<featureName>Moviment Judgment</featureName>
+					<featureDescription>Checks if the player movement ran a winning
+						sequence or not.</featureDescription>
 					<methods>
 						<method>
 							<methodName>checkForWinner</methodName>
