@@ -16,6 +16,7 @@ public class TicTacToe implements EntryPoint {
 
 	public static String[][] currentGame = new String[3][3];
 	public static String currentPlayer = Player_X;
+	public static boolean waitingFlag = false;
 	public static String sequenceWinner = null;
 
 	public void onModuleLoad() {
