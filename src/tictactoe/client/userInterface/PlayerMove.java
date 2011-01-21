@@ -18,7 +18,10 @@ public class PlayerMove {
 	 */
 	public static void makeMove(GameGrid gameGrid, Cell cell) {
 
-		if (TicTacToe.sequenceWinner == null && cellIsEmpty(gameGrid, cell)) {
+		if (!TicTacToe.waitingFlag && TicTacToe.sequenceWinner == null
+				&& cellIsEmpty(gameGrid, cell)) {
+
+			TicTacToe.waitingFlag = true;
 
 			String marker = "<font size=6><b>" + TicTacToe.currentPlayer
 					+ "</b></font>";
@@ -50,6 +53,8 @@ public class PlayerMove {
 
 		else if (TicTacToe.currentPlayer.equals(TicTacToe.Player_O))
 			TicTacToe.currentPlayer = TicTacToe.Player_X;
+
+		TicTacToe.waitingFlag = false;
 	}
 
 }
