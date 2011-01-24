@@ -6,9 +6,13 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-/**
+
+
+/** 
  * The web page where the game is shown. Accommodates the game grid and also
- * some options such as a restart button, help, game score, game status, ...
+ some options such as a restart button, help, game score, game status, ...
+ * 
+ * @UserManual 
  */
 public class GameBoard extends VerticalPanel {
 
