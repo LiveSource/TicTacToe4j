@@ -9,10 +9,11 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-/**
+
+
+/** 
  * 
- * 
- * @Architecture
+ *  
  */
 public class CheckWinner {
 
