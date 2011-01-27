@@ -12,12 +12,16 @@ import com.google.gwt.user.client.ui.Widget;
 
 
 
+
+
 /** 
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
  series, the current Player wins the game, the system highlights the winning
  sequence and the game is over.
 
 TODO : Change color for Red
+
+TODO: Take hard coded HTML out
  * 
  * @TODO
  * @Feature 
