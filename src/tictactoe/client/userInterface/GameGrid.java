@@ -8,13 +8,11 @@ import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
-
-
-/** 
+/**
  * 3x3 grid of cells in which players enter a mark to indicate their desired
- move.
+ * move.
  * 
- * @Feature 
+ * @Feature
  */
 public class GameGrid extends Grid {
 
@@ -24,8 +22,6 @@ public class GameGrid extends Grid {
 
 		this.setBorderWidth(1);
 		this.setSize("400px", "400px");
-
-		this.setTitle("test Title");
 
 		formatGridCells();
 
