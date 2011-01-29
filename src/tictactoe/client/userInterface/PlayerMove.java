@@ -8,8 +8,10 @@ import com.google.gwt.user.client.ui.HTMLTable.Cell;
 
 
 
+
+
 /** 
- * Performs a move in the game. any more....
+ * Performs a move in the game.
  * 
  * @Feature 
  */
