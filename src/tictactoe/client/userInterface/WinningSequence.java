@@ -22,15 +22,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 
 
+
+
 /** 
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
  series, the current Player wins the game, the system highlights the winning
  sequence and the game is over.
-
-TODO: move hardcoded html out of the biz logic
-TODO: please make the x's turn green instead of red when i win
  * 
- * @TODO
  * @Feature 
  */
 public class WinningSequence {
