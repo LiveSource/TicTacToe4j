@@ -10,8 +10,10 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 
 
+
+
 /** 
- * 
+ * A grid of 3 x 3 cells in wich the players insert marks to indicate their desired moviments.
  * 
  * @Feature 
  */
