@@ -10,35 +10,12 @@ import com.google.gwt.user.client.ui.DecoratedPopupPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/** 
+/**
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
- series, the current Player wins the game, the system highlights the winning
- sequence and the game is over.
-
-TODO: Change the winning sequence color from Red to Green.
+ * series, the current Player wins the game, the system highlights the winning
+ * sequence and the game is over.
  * 
- * @TODO
- * @Feature 
+ * @Feature
  */
 public class WinningSequence {
 
