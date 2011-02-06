@@ -8,16 +8,10 @@ import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
-
-
-
-
-
-
-/** 
+/**
  * 
  * 
- * @Feature 
+ * @Feature
  */
 public class GameGrid extends Grid {
 
