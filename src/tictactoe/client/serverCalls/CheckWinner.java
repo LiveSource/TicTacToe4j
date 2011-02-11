@@ -1,6 +1,6 @@
 package tictactoe.client.serverCalls;
 
-import tictactoe.client.Initialization;
+import tictactoe.client.GameInitialization;
 import tictactoe.client.userInterface.PlayerMove;
 import tictactoe.client.userInterface.WinningSequence;
 import tictactoe.shared.GameEntity;
@@ -34,7 +34,7 @@ public class CheckWinner {
 
 						if (gameReturned.getSequenceWinner() != null) {
 
-							Initialization.currentGame
+							GameInitialization.currentGameStatus
 									.setSequenceWinner(gameReturned
 											.getSequenceWinner());
 

@@ -1,7 +1,7 @@
 package tictactoe.client.userInterface;
 
 import helpagile.client.exportation.HelpHint;
-import tictactoe.client.Initialization;
+import tictactoe.client.GameInitialization;
 import tictactoe.shared.GameEntity;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -26,32 +26,32 @@ public class WinningSequence {
 
 	public static void showWinner(int currentMoveRow, int currentMoveColumn) {
 
-		String marker = "<font size=6 color=\"red\"><b>"
-				+ Initialization.currentGame.getCurrentPlayer().getPlayerIcon()
+		String marker = "<font size=7 color=\"red\"><b>"
+				+ GameInitialization.currentGameStatus.getCurrentPlayer().getPlayerIcon()
 				+ "</b></font>";
 
-		if (Initialization.currentGame.getSequenceWinner().equals(
+		if (GameInitialization.currentGameStatus.getSequenceWinner().equals(
 				GameEntity.SEQUENCE_ROW)) {
 
 			GameBoard.gameGrid.setHTML(currentMoveRow, 0, marker);
 			GameBoard.gameGrid.setHTML(currentMoveRow, 1, marker);
 			GameBoard.gameGrid.setHTML(currentMoveRow, 2, marker);
 
-		} else if (Initialization.currentGame.getSequenceWinner().equals(
+		} else if (GameInitialization.currentGameStatus.getSequenceWinner().equals(
 				GameEntity.SEQUENCE_COLUMN)) {
 
 			GameBoard.gameGrid.setHTML(0, currentMoveColumn, marker);
 			GameBoard.gameGrid.setHTML(1, currentMoveColumn, marker);
 			GameBoard.gameGrid.setHTML(2, currentMoveColumn, marker);
 
-		} else if (Initialization.currentGame.getSequenceWinner().equals(
+		} else if (GameInitialization.currentGameStatus.getSequenceWinner().equals(
 				GameEntity.SEQUENCE_DIAGONAL_RIGHT)) {
 
 			GameBoard.gameGrid.setHTML(0, 2, marker);
 			GameBoard.gameGrid.setHTML(1, 1, marker);
 			GameBoard.gameGrid.setHTML(2, 0, marker);
 
-		} else if (Initialization.currentGame.getSequenceWinner().equals(
+		} else if (GameInitialization.currentGameStatus.getSequenceWinner().equals(
 				GameEntity.SEQUENCE_DIAGONAL_LEFT)) {
 
 			GameBoard.gameGrid.setHTML(0, 0, marker);

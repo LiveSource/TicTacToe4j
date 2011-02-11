@@ -3,16 +3,16 @@ package tictactoe.client;
 import tictactoe.shared.GameEntity;
 import tictactoe.shared.Player;
 
-public class Initialization {
+public class GameInitialization {
 
-	public static GameEntity currentGame = new GameEntity();
-	public static boolean waitingFlag = false;
+	public static GameEntity currentGameStatus = new GameEntity();
+	public static boolean waitingMoveFlag = false;
 
 	public static Player playerO = new Player();
 
 	public static Player playerX = new Player();
 
-	public Initialization() {
+	public GameInitialization() {
 
 		initializeUsers();
 	}
@@ -23,8 +23,8 @@ public class Initialization {
 
 		playerX.setPlayerIcon(Player.PlayerIcon_X);
 
-		currentGame.setCurrentPlayer(playerX);
+		currentGameStatus.setCurrentPlayer(playerX);
 
-		currentGame.setGameMoves(new Player[3][3]);
+		currentGameStatus.setGameMoves(new Player[3][3]);
 	}
 }

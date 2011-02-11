@@ -11,7 +11,7 @@ public class TicTacToe implements EntryPoint {
 
 	public void onModuleLoad() {
 
-		new Initialization();
+		new GameInitialization();
 
 		new HelpInitialization();
 	}
