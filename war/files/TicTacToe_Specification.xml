@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<projectID>2</projectID>
+	<projectName>Tic Tac Toe</projectName>
+	<projectDomain>tictactoe</projectDomain>
+	<projectDescription>&lt;b&gt;Tic-tac-toe&lt;/b&gt;, also spelled
+		&lt;b&gt;tick tack toe&lt;/b&gt;, or &lt;b&gt;noughts and
+		crosses&lt;/b&gt; as it is known in the UK, Ireland, Australia, New
+		Zealand, is a pencil-and-paper game for two players,
+		&lt;b&gt;O&lt;/b&gt; and &lt;b&gt;X&lt;/b&gt;, who take turns marking
+		the spaces in a 3 x 3 grid, usually &lt;b&gt;X&lt;/b&gt; going first.
+		The player who succeeds in placing three respective marks in a
+		horizontal, vertical, or diagonal row wins the
+		game.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;
+		&lt;center&gt;&lt;object id="scPlayer"
+		width="500" type="application/x-shockwave-flash"
+		data="http://content.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/mp4h264player.swf"
+		height="300"&gt; &lt;param name="movie"
+		value="http://content.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/mp4h264player.swf"&gt;
+		&lt;param name="quality" value="high"&gt; &lt;param name="bgcolor"
+		value="#FFFFFF"&gt; &lt;param name="flashVars"
+		value="thumb=http://content.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/FirstFrame.jpg&amp;amp;containerwidth=1146&amp;amp;containerheight=751&amp;amp;content=http://content.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/TicTacToeGame.mp4&amp;amp;blurover=false"&gt;
+		&lt;param name="allowFullScreen" value="true"&gt; &lt;param
+		name="scale" value="showall"&gt; &lt;param name="allowScriptAccess"
+		value="always"&gt; &lt;param name="base"
+		value="http://content.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/"&gt;
+		&lt;iframe type="text/html" style="overflow: hidden;"
+		src="http://www.screencast.com/users/AllineO/folders/LIVE%20SOURCE/media/5226bb95-167a-4c6f-9c49-5a356bb459aa/embed"
+		frameborder="0" height="751" scrolling="no"
+		width="1146"&gt;&lt;/iframe&gt;
+		&lt;/object&gt;&lt;/center&gt;&lt;/div&gt;</projectDescription>
+	<projectLinks>&lt;div&gt;&lt;br&gt;&lt;/div&gt;Tic Tac Toe online
+		version:&lt;br&gt;(Google App Engine): &lt;a
+		href="http://tictactoe4j.appspot.com"
+		target="_blank"&gt;http://tictactoe4j.appspot.com&lt;/a&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;What
+		is Tic Tac Toe:&lt;/div&gt;&lt;div&gt;&lt;a
+		href="http://en.wikipedia.org/wiki/Tic-tac-toe"
+		target="_blank"&gt;http://en.wikipedia.org/wiki/Tic-tac-toe&lt;/a&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;tictactoe4j
+		- File Repository:&lt;br&gt;Google Code -
+		Subversion:&lt;br&gt;#
+		Non-members may check out a read-only working copy anonymously over
+		HTTP.&lt;/div&gt;&lt;div&gt; svn
+		checkout &lt;a href="http://tictactoe4j.googlecode.com/svn/trunk/"
+		target="_blank"&gt;http://tictactoe4j.googlecode.com/svn/trunk/&lt;/a&gt;
+		tictactoe4j-read-only&lt;/div&gt;&lt;/div&gt;&lt;br&gt;</projectLinks>
+	<projectComponents>
+		<projectComponent componentName="Authentication"
+			componentPath="authentication/client">
+			<entries>
+				<entry featureType="" isTodo="false">
+					<fileName>Login.java</fileName>
+					<filePath>authentication/client</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296629945317</fileDate>
+					<className>Login</className>
+					<featurePath></featurePath>
+					<featureName>Login</featureName>
+					<featureFolder>Client</featureFolder>
+					<featureDescription>Form to identify the name and the password of
+						the player.</featureDescription>
+					<constructors>
+						<method>
+							<methodName>Login</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods />
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="" isTodo="false">
+					<fileName>Logout.java</fileName>
+					<filePath>authentication/client</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296104562132</fileDate>
+					<className>Logout</className>
+					<featurePath></featurePath>
+					<featureName>Logout</featureName>
+					<featureFolder>Client</featureFolder>
+					<featureDescription>Link to a safe exit from the game.
+					</featureDescription>
+					<constructors>
+						<method>
+							<methodName>Logout</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods />
+					<fields />
+					<comments />
+				</entry>
+			</entries>
+		</projectComponent>
+		<projectComponent componentName="Gaming"
+			componentPath="client">
+			<entries>
+				<entry featureType="" isTodo="false">
+					<fileName>GameInitialization.java</fileName>
+					<filePath>client</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1297393584028</fileDate>
+					<className>GameInitialization</className>
+					<featurePath></featurePath>
+					<featureName>Game Initialization</featureName>
+					<featureFolder>Client</featureFolder>
+					<featureDescription></featureDescription>
+					<constructors>
+						<method>
+							<methodName>GameInitialization</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>initializeUsers</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields>
+						<field>
+							<fieldName>currentGameStatus</fieldName>
+							<fieldType>GameEntity</fieldType>
+						</field>
+						<field>
+							<fieldName>waitingMoveFlag</fieldName>
+							<fieldType>boolean</fieldType>
+						</field>
+						<field>
+							<fieldName>playerO</fieldName>
+							<fieldType>Player</fieldType>
+						</field>
+						<field>
+							<fieldName>playerX</fieldName>
+							<fieldType>Player</fieldType>
+						</field>
+					</fields>
+					<comments />
+				</entry>
+				<entry featureType="Architecture" isTodo="false">
+					<fileName>HelpInitialization.java</fileName>
+					<filePath>client</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>HelpInitialization</className>
+					<featurePath></featurePath>
+					<featureName>Help Initialization</featureName>
+					<featureFolder>Client</featureFolder>
+					<featureDescription>Loading the contents of the help system.
+					</featureDescription>
+					<constructors>
+						<method>
+							<methodName>HelpInitialization</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods />
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="Architecture" isTodo="false">
+					<fileName>TicTacToe.java</fileName>
+					<filePath>client</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1297393584028</fileDate>
+					<className>TicTacToe</className>
+					<featurePath></featurePath>
+					<featureName>Tic Tac Toe</featureName>
+					<featureFolder>Client</featureFolder>
+					<featureDescription>Anchor class to init the system by the Google
+						Web Toolkit (EntryPoint).</featureDescription>
+					<constructors>
+						<method>
+							<methodName>TicTacToe</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>onModuleLoad</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments>
+						<comment>
+							<commentName>Fri Jan 21 17:30:01 PST 2011</commentName>
+							<commentDescription>This is the first class that GWT loads when
+								the system starts.</commentDescription>
+						</comment>
+					</comments>
+				</entry>
+				<entry featureType="" isTodo="false">
+					<fileName>CheckWinner.java</fileName>
+					<filePath>client/serverCalls</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1297393584028</fileDate>
+					<className>CheckWinner</className>
+					<featurePath>serverCalls</featurePath>
+					<featureName>Check Winner</featureName>
+					<featureFolder>Server Calls</featureFolder>
+					<featureDescription></featureDescription>
+					<constructors>
+						<method>
+							<methodName>CheckWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields>
+						<field>
+							<fieldName>greetingService</fieldName>
+							<fieldType>GreetingServiceAsync</fieldType>
+						</field>
+					</fields>
+					<comments />
+				</entry>
+				<entry featureType="Architecture" isTodo="false">
+					<fileName>GreetingService.java</fileName>
+					<filePath>client/serverCalls</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>GreetingService</className>
+					<featurePath>serverCalls</featurePath>
+					<featureName>Greeting Service</featureName>
+					<featureFolder>Server Calls</featureFolder>
+					<featureDescription>The client side stub for the RPC service.
+					</featureDescription>
+					<constructors />
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="Architecture" isTodo="false">
+					<fileName>GreetingServiceAsync.java</fileName>
+					<filePath>client/serverCalls</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>GreetingServiceAsync</className>
+					<featurePath>serverCalls</featurePath>
+					<featureName>Greeting Service Async</featureName>
+					<featureFolder>Server Calls</featureFolder>
+					<featureDescription>The async counterpart of
+						&lt;code&gt;GreetingService&lt;/code&gt;.</featureDescription>
+					<constructors />
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="UserManual" isTodo="false">
+					<fileName>GameBoard.java</fileName>
+					<filePath>client/userInterface</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>GameBoard</className>
+					<featurePath>userInterface</featurePath>
+					<featureName>Game Board</featureName>
+					<featureFolder>User Interface</featureFolder>
+					<featureDescription>The web page where the game is shown.
+						Accommodates the game grid and also
+						some options such as a restart button, help, game score, game status,
+						...</featureDescription>
+					<constructors>
+						<method>
+							<methodName>GameBoard</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods />
+					<fields>
+						<field>
+							<fieldName>gameGrid</fieldName>
+							<fieldType>GameGrid</fieldType>
+						</field>
+					</fields>
+					<comments />
+				</entry>
+				<entry featureType="Feature" isTodo="false">
+					<fileName>GameGrid.java</fileName>
+					<filePath>client/userInterface</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296962898249</fileDate>
+					<className>GameGrid</className>
+					<featurePath>userInterface</featurePath>
+					<featureName>Game Grid</featureName>
+					<featureFolder>User Interface</featureFolder>
+					<featureDescription>A grid of 3 x 3 cells in which the players
+						insert marks to indicate their desired movements.
+					</featureDescription>
+					<constructors>
+						<method>
+							<methodName>GameGrid</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>makeMove</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>formatGridCells</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="Feature" isTodo="false">
+					<fileName>PlayerMove.java</fileName>
+					<filePath>client/userInterface</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1297393584028</fileDate>
+					<className>PlayerMove</className>
+					<featurePath>userInterface</featurePath>
+					<featureName>Player Move</featureName>
+					<featureFolder>User Interface</featureFolder>
+					<featureDescription>Performs a move in the game.
+					</featureDescription>
+					<constructors>
+						<method>
+							<methodName>PlayerMove</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>makeMove</methodName>
+							<methodDescription>When the player clicks in a cell, the game
+								draws an O or a X on the game
+								grid depending on which player's turn it is.</methodDescription>
+						</method>
+						<method>
+							<methodName>isCellEmpty</methodName>
+							<methodDescription>The Player can select a cell only if it wasn't
+								selected yet.</methodDescription>
+						</method>
+						<method>
+							<methodName>showPlayerIcon</methodName>
+							<methodDescription>Make the current player icon shows up in the
+								grid cell.</methodDescription>
+						</method>
+						<method>
+							<methodName>toggleCurrentPlayer</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments>
+						<comment>
+							<commentName>Thu Jan 27 17:59:31 PST 2011</commentName>
+							<commentDescription>uhnuhnu</commentDescription>
+						</comment>
+					</comments>
+				</entry>
+				<entry featureType="" isTodo="true">
+					<fileName>Timer.java</fileName>
+					<filePath>client/userInterface</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>Timer</className>
+					<featurePath>userInterface</featurePath>
+					<featureName>Timer</featureName>
+					<featureFolder>User Interface</featureFolder>
+					<featureDescription>Counts the time passed since the current game
+						started.</featureDescription>
+					<constructors>
+						<method>
+							<methodName>Timer</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods />
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="Feature" isTodo="false">
+					<fileName>WinningSequence.java</fileName>
+					<filePath>client/userInterface</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1297465798518</fileDate>
+					<className>WinningSequence</className>
+					<featurePath>userInterface</featurePath>
+					<featureName>Winning Sequence</featureName>
+					<featureFolder>User Interface</featureFolder>
+					<featureDescription>If there is three consecutive marks in a
+						horizontal, vertical, or diagonal
+						series, the current Player wins the game, the system highlights the
+						winning
+						sequence and the game is over.</featureDescription>
+					<constructors>
+						<method>
+							<methodName>WinningSequence</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>showWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>showHelpHint</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+			</entries>
+		</projectComponent>
+		<projectComponent componentName="Infra Structure/Entities"
+			componentPath="shared">
+			<entries>
+				<entry featureType="Entity" isTodo="false">
+					<fileName>GameEntity.java</fileName>
+					<filePath>shared</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>GameEntity</className>
+					<featurePath></featurePath>
+					<featureName>Game Entity</featureName>
+					<featureFolder>Shared</featureFolder>
+					<featureDescription></featureDescription>
+					<constructors>
+						<method>
+							<methodName>GameEntity</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>getDate</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setDate</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>getGameMoves</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setGameMoves</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>getCurrentPlayer</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setCurrentPlayer</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>getSequenceWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setSequenceWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields>
+						<field>
+							<fieldName>SEQUENCE_ROW</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>SEQUENCE_COLUMN</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>SEQUENCE_DIAGONAL_RIGHT</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>SEQUENCE_DIAGONAL_LEFT</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>date</fieldName>
+							<fieldType>java.util.Date</fieldType>
+						</field>
+						<field>
+							<fieldName>gameMoves</fieldName>
+							<fieldType>Player[][]</fieldType>
+						</field>
+						<field>
+							<fieldName>currentPlayer</fieldName>
+							<fieldType>Player</fieldType>
+						</field>
+						<field>
+							<fieldName>sequenceWinner</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+					</fields>
+					<comments />
+				</entry>
+				<entry featureType="Entity" isTodo="false">
+					<fileName>Player.java</fileName>
+					<filePath>shared</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>Player</className>
+					<featurePath></featurePath>
+					<featureName>Player</featureName>
+					<featureFolder>Shared</featureFolder>
+					<featureDescription>Information about each player of the game.
+					</featureDescription>
+					<constructors>
+						<method>
+							<methodName>Player</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>getName</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setName</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>getEmail</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setEmail</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>getPlayerIcon</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>setPlayerIcon</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields>
+						<field>
+							<fieldName>PlayerIcon_X</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>PlayerIcon_O</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>name</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>email</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+						<field>
+							<fieldName>playerIcon</fieldName>
+							<fieldType>java.lang.String</fieldType>
+						</field>
+					</fields>
+					<comments />
+				</entry>
+			</entries>
+		</projectComponent>
+		<projectComponent componentName="Infra Structure/Server"
+			componentPath="server">
+			<entries>
+				<entry featureType="Architecture" isTodo="false">
+					<fileName>GreetingServiceImpl.java</fileName>
+					<filePath>server</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>GreetingServiceImpl</className>
+					<featurePath></featurePath>
+					<featureName>Greeting Service Impl</featureName>
+					<featureFolder>Server</featureFolder>
+					<featureDescription>The server side implementation of the RPC
+						service.</featureDescription>
+					<constructors>
+						<method>
+							<methodName>GreetingServiceImpl</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+				<entry featureType="" isTodo="false">
+					<fileName>MovimentJudgment.java</fileName>
+					<filePath>server</filePath>
+					<fileAuthor>Alline.Oliveira</fileAuthor>
+					<fileDate>1296103865055</fileDate>
+					<className>MovimentJudgment</className>
+					<featurePath></featurePath>
+					<featureName>Moviment Judgment</featureName>
+					<featureFolder>Server</featureFolder>
+					<featureDescription>Checks if the player movement ran a winning
+						sequence or not.</featureDescription>
+					<constructors>
+						<method>
+							<methodName>MovimentJudgment</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</constructors>
+					<methods>
+						<method>
+							<methodName>checkForWinner</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>checkWinnerRow</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>checkWinnerColumn</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>checkWinnerDiagonalRight</methodName>
+							<methodDescription></methodDescription>
+						</method>
+						<method>
+							<methodName>checkWinnerDiagonalLeft</methodName>
+							<methodDescription></methodDescription>
+						</method>
+					</methods>
+					<fields />
+					<comments />
+				</entry>
+			</entries>
+		</projectComponent>
+	</projectComponents>
+</project>
