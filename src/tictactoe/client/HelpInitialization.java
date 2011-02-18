@@ -39,7 +39,7 @@ public class HelpInitialization {
 
 		};
 
-		helpagile.client.HelpInitialization.initHelp("TicTacToe",
+		helpagile.client.HelpInitialization.initHelp("TicTacToe", null,
 				requestCallback);
 
 	}
