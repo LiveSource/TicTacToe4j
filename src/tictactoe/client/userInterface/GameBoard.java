@@ -8,11 +8,13 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 
 
+
+
 /** 
- * The web page where the game is shown. Accommodates the game grid and also
- some options such as a restart button, help, game score, game status, ...
+ * Accommodates the game grid and also some options such as a restart button, help, game score, game status, ...
+The game starts with the game board showing in the web page. 
  * 
- * @UserManual 
+ * @MainFeature 
  */
 public class GameBoard extends VerticalPanel {
 
