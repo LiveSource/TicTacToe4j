@@ -26,7 +26,7 @@ public class HelpInitialization {
 				ConvertSpecificationXML.convertHelpEntries(response.getText());
 
 				RootPanel.get("gameBoardHtmlTagId").add(
-						HelpWindow.helpIcon("TicTacToe"));
+						HelpWindow.helpIcon("TicTacToe", "en"));
 
 				RootPanel.get("gameBoardHtmlTagId").add(new GameBoard());
 			}

@@ -17,7 +17,7 @@ public class TicTacToeTest extends GWTTestCase {
 
 	public void testOnModuleLoad() {
 
-		new TicTacToe().onModuleLoad();
+		new GWTEntryPoint().onModuleLoad();
 
 		assertTrue(true);
 	}

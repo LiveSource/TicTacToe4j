@@ -16,7 +16,7 @@
   <inherits name='com.google.gwt.xml.XML'/>
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='tictactoe.client.TicTacToe'/>
+  <entry-point class='tictactoe.client.GWTEntryPoint'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>

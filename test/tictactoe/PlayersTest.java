@@ -10,14 +10,14 @@ public class PlayersTest {
 
 	public static Player returnPlayerO() {
 
-		playerO.setPlayerIcon(Player.PlayerIcon_O);
+		playerO.setPlayerSymbol(Player.PlayerSymbol_O);
 
 		return playerO;
 	}
 
 	public static Player returnPlayerX() {
 
-		playerX.setPlayerIcon(Player.PlayerIcon_X);
+		playerX.setPlayerSymbol(Player.PlayerSymbol_X);
 
 		return playerX;
 	}

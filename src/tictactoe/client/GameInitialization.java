@@ -1,30 +1,18 @@
 package tictactoe.client;
 
-import tictactoe.shared.GameEntity;
 import tictactoe.shared.Player;
 
 public class GameInitialization {
 
-	public static GameEntity currentGameStatus = new GameEntity();
-	public static boolean waitingMoveFlag = false;
-
-	public static Player playerO = new Player();
-
-	public static Player playerX = new Player();
-
 	public GameInitialization() {
 
-		initializeUsers();
-	}
+		GlobalVariables.playerO.setPlayerSymbol(Player.PlayerSymbol_O);
 
-	private void initializeUsers() {
+		GlobalVariables.playerX.setPlayerSymbol(Player.PlayerSymbol_X);
 
-		playerO.setPlayerIcon(Player.PlayerIcon_O);
+		GlobalVariables.currentGameStatus
+				.setCurrentPlayer(GlobalVariables.playerX);
 
-		playerX.setPlayerIcon(Player.PlayerIcon_X);
-
-		currentGameStatus.setCurrentPlayer(playerX);
-
-		currentGameStatus.setGameMoves(new Player[3][3]);
+		GlobalVariables.currentGameStatus.setGameMoves(new Player[3][3]);
 	}
 }

@@ -7,7 +7,7 @@ import com.google.gwt.core.client.EntryPoint;
  * 
  * @Architecture
  */
-public class TicTacToe implements EntryPoint {
+public class GWTEntryPoint implements EntryPoint {
 
 	public void onModuleLoad() {
 

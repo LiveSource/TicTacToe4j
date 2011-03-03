@@ -1,6 +1,6 @@
 package tictactoe.client.userInterface;
 
-import tictactoe.client.GameInitialization;
+import tictactoe.client.GlobalVariables;
 import tictactoe.client.serverCalls.CheckWinner;
 import tictactoe.shared.Player;
 
@@ -21,25 +21,26 @@ public class PlayerMove {
 	 * When the player clicks in a cell, the game draws an O or a X on the game
 	 * grid depending on which player's turn it is.
 	 */
-	public static void makeMove(GameGrid gameGrid, Cell cell) {
+	public static void makeMove(GameGrid gameGrid, Cell selectedCell) {
 
-		if (!GameInitialization.waitingMoveFlag
-				&& GameInitialization.currentGameStatus.getSequenceWinner() == null
-				&& isCellEmpty(gameGrid, cell)) {
+		if (!GlobalVariables.waitingMoveFlag
+				&& GlobalVariables.currentGameStatus.getSequenceWinner() == null
+				&& isCellEmpty(gameGrid, selectedCell)) {
 
-			GameInitialization.waitingMoveFlag = true;
+			GlobalVariables.waitingMoveFlag = true;
 
-			String marker = showPlayerIcon(GameInitialization.currentGameStatus
-					.getCurrentPlayer().getPlayerIcon());
+			String marker = showPlayerSymbol(GlobalVariables.currentGameStatus
+					.getCurrentPlayer().getPlayerSymbol());
 
-			gameGrid.setHTML(cell.getRowIndex(), cell.getCellIndex(), marker);
+			gameGrid.setHTML(selectedCell.getRowIndex(),
+					selectedCell.getCellIndex(), marker);
 
-			GameInitialization.currentGameStatus.getGameMoves()[cell
-					.getRowIndex()][cell.getCellIndex()] = GameInitialization.currentGameStatus
+			GlobalVariables.currentGameStatus.getGameMoves()[selectedCell
+					.getRowIndex()][selectedCell.getCellIndex()] = GlobalVariables.currentGameStatus
 					.getCurrentPlayer();
 
-			CheckWinner.checkForWinner(GameInitialization.currentGameStatus,
-					cell.getRowIndex(), cell.getCellIndex());
+			CheckWinner.checkForWinner(GlobalVariables.currentGameStatus,
+					selectedCell.getRowIndex(), selectedCell.getCellIndex());
 		}
 	}
 
@@ -48,42 +49,42 @@ public class PlayerMove {
 	 */
 	private static boolean isCellEmpty(GameGrid gameGrid, Cell cell) {
 
-		Player cellPlayer = GameInitialization.currentGameStatus.getGameMoves()[cell
+		Player cellPlayer = GlobalVariables.currentGameStatus.getGameMoves()[cell
 				.getRowIndex()][cell.getCellIndex()];
 
 		return (cellPlayer == null);
 	}
 
 	/**
-	 * Make the current player icon shows up in the grid cell.
+	 * Shows the right player symbol for the current player in the grid cell.
 	 */
-	private static String showPlayerIcon(String playerIcon) {
+	private static String showPlayerSymbol(String playerSymbol) {
 
-		String iconColor = "darkgreen";
-		if (playerIcon.equals(GameInitialization.playerO.getPlayerIcon())) {
+		String symbolColor = "darkgreen";
+		if (playerSymbol.equals(GlobalVariables.playerO.getPlayerSymbol())) {
 
-			iconColor = "darkblue";
+			symbolColor = "darkblue";
 		}
 
-		String marker = "<font size=6 color=" + iconColor + "><b>" + playerIcon
-				+ "</b></font>";
+		String symbol = "<font size=6 color=" + symbolColor + "><b>"
+				+ playerSymbol + "</b></font>";
 
-		return marker;
+		return symbol;
 	}
 
 	public static void toggleCurrentPlayer() {
 
-		if (GameInitialization.currentGameStatus.getCurrentPlayer()
-				.getPlayerIcon().equals(Player.PlayerIcon_X))
-			GameInitialization.currentGameStatus
-					.setCurrentPlayer(GameInitialization.playerO);
+		if (GlobalVariables.currentGameStatus.getCurrentPlayer()
+				.getPlayerSymbol().equals(Player.PlayerSymbol_X))
+			GlobalVariables.currentGameStatus
+					.setCurrentPlayer(GlobalVariables.playerO);
 
-		else if (GameInitialization.currentGameStatus.getCurrentPlayer()
-				.getPlayerIcon().equals(Player.PlayerIcon_O))
-			GameInitialization.currentGameStatus
-					.setCurrentPlayer(GameInitialization.playerX);
+		else if (GlobalVariables.currentGameStatus.getCurrentPlayer()
+				.getPlayerSymbol().equals(Player.PlayerSymbol_O))
+			GlobalVariables.currentGameStatus
+					.setCurrentPlayer(GlobalVariables.playerX);
 
-		GameInitialization.waitingMoveFlag = false;
+		GlobalVariables.waitingMoveFlag = false;
 	}
 
 }

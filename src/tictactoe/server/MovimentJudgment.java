@@ -48,20 +48,20 @@ public class MovimentJudgment {
 	private static boolean checkWinnerRow(GameEntity currentGame,
 			Player currentPlayer, int currentMoveRow) {
 
-		String currentPlayerIcon = currentPlayer.getPlayerIcon();
+		String currentPlayerIcon = currentPlayer.getPlayerSymbol();
 
 		if (currentGame.getGameMoves()[currentMoveRow][0] != null
 				&& currentGame.getGameMoves()[currentMoveRow][1] != null
 				&& currentGame.getGameMoves()[currentMoveRow][2] != null
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[currentMoveRow][0]
-								.getPlayerIcon())
+								.getPlayerSymbol())
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[currentMoveRow][1]
-								.getPlayerIcon())
+								.getPlayerSymbol())
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[currentMoveRow][2]
-								.getPlayerIcon())) {
+								.getPlayerSymbol())) {
 
 			return true;
 		}
@@ -72,20 +72,20 @@ public class MovimentJudgment {
 	private static boolean checkWinnerColumn(GameEntity currentGame,
 			Player currentPlayer, int currentMoveColumn) {
 
-		String currentPlayerIcon = currentPlayer.getPlayerIcon();
+		String currentPlayerIcon = currentPlayer.getPlayerSymbol();
 
 		if (currentGame.getGameMoves()[0][currentMoveColumn] != null
 				&& currentGame.getGameMoves()[1][currentMoveColumn] != null
 				&& currentGame.getGameMoves()[2][currentMoveColumn] != null
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[0][currentMoveColumn]
-								.getPlayerIcon())
+								.getPlayerSymbol())
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[1][currentMoveColumn]
-								.getPlayerIcon())
+								.getPlayerSymbol())
 				&& currentPlayerIcon
 						.equals(currentGame.getGameMoves()[2][currentMoveColumn]
-								.getPlayerIcon())) {
+								.getPlayerSymbol())) {
 
 			return true;
 		}
@@ -96,17 +96,17 @@ public class MovimentJudgment {
 	private static boolean checkWinnerDiagonalRight(GameEntity currentGame,
 			Player currentPlayer) {
 
-		String currentPlayerIcon = currentPlayer.getPlayerIcon();
+		String currentPlayerIcon = currentPlayer.getPlayerSymbol();
 
 		if (currentGame.getGameMoves()[0][2] != null
 				&& currentGame.getGameMoves()[1][1] != null
 				&& currentGame.getGameMoves()[2][0] != null
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[0][2]
-						.getPlayerIcon())
+						.getPlayerSymbol())
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[1][1]
-						.getPlayerIcon())
+						.getPlayerSymbol())
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[2][0]
-						.getPlayerIcon())) {
+						.getPlayerSymbol())) {
 
 			return true;
 		}
@@ -117,17 +117,17 @@ public class MovimentJudgment {
 	private static boolean checkWinnerDiagonalLeft(GameEntity currentGame,
 			Player currentPlayer) {
 
-		String currentPlayerIcon = currentPlayer.getPlayerIcon();
+		String currentPlayerIcon = currentPlayer.getPlayerSymbol();
 
 		if (currentGame.getGameMoves()[0][0] != null
 				&& currentGame.getGameMoves()[1][1] != null
 				&& currentGame.getGameMoves()[2][2] != null
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[0][0]
-						.getPlayerIcon())
+						.getPlayerSymbol())
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[1][1]
-						.getPlayerIcon())
+						.getPlayerSymbol())
 				&& currentPlayerIcon.equals(currentGame.getGameMoves()[2][2]
-						.getPlayerIcon())) {
+						.getPlayerSymbol())) {
 
 			return true;
 

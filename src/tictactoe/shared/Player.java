@@ -9,14 +9,14 @@ import java.io.Serializable;
  */
 public class Player implements Serializable {
 
-	public static final String PlayerIcon_X = "X";
-	public static final String PlayerIcon_O = "O";
+	public static final String PlayerSymbol_X = "X";
+	public static final String PlayerSymbol_O = "O";
 
 	private String name;
 
 	private String email;
 
-	private String playerIcon;
+	private String playerSymbol;
 
 	public String getName() {
 		return name;
@@ -34,12 +34,12 @@ public class Player implements Serializable {
 		this.email = email;
 	}
 
-	public String getPlayerIcon() {
-		return playerIcon;
+	public String getPlayerSymbol() {
+		return playerSymbol;
 	}
 
-	public void setPlayerIcon(String playerIcon) {
-		this.playerIcon = playerIcon;
+	public void setPlayerSymbol(String playerSymbol) {
+		this.playerSymbol = playerSymbol;
 	}
 
 }

@@ -15,9 +15,9 @@ public class GameEntityTest {
 
 		Player playerX = new Player();
 
-		playerO.setPlayerIcon(Player.PlayerIcon_O);
+		playerO.setPlayerSymbol(Player.PlayerSymbol_O);
 
-		playerX.setPlayerIcon(Player.PlayerIcon_X);
+		playerX.setPlayerSymbol(Player.PlayerSymbol_X);
 
 		gameStatus[0][0] = playerX;
 		gameStatus[0][1] = playerO;

@@ -1,6 +1,6 @@
 package tictactoe.client.serverCalls;
 
-import tictactoe.client.GameInitialization;
+import tictactoe.client.GlobalVariables;
 import tictactoe.client.userInterface.PlayerMove;
 import tictactoe.client.userInterface.WinningSequence;
 import tictactoe.shared.GameEntity;
@@ -9,12 +9,6 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-
-
-/** 
- * 
- *  
- */
 public class CheckWinner {
 
 	/**
@@ -34,7 +28,7 @@ public class CheckWinner {
 
 						if (gameReturned.getSequenceWinner() != null) {
 
-							GameInitialization.currentGameStatus
+							GlobalVariables.currentGameStatus
 									.setSequenceWinner(gameReturned
 											.getSequenceWinner());
 
