@@ -4,9 +4,12 @@ import com.google.gwt.user.client.ui.Anchor;
 
 
 
+
+
 /** 
  * Link to a safe exit from the game.
  * 
+ * @TODO
  * @Requirement 
  */
 public class Logout extends Anchor {
