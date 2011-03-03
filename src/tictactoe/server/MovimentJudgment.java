@@ -3,9 +3,12 @@ package tictactoe.server;
 import tictactoe.shared.GameEntity;
 import tictactoe.shared.Player;
 
-/**
+
+
+/** 
  * Checks if the player movement ran a winning sequence or not.
  * 
+ * @Requirement 
  */
 public class MovimentJudgment {
 
