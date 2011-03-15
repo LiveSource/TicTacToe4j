@@ -14,11 +14,11 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 
 
+
+
 /** 
  * A grid of 3 x 3 cells in which the players insert marks to indicate their desired movements.
-TODO: Don't show the hint all the time, it is annoying me.
  * 
- * @TODO
  * @Requirement 
  */
 public class GameGrid extends Grid {
