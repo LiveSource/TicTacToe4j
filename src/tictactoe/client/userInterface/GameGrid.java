@@ -16,10 +16,12 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 
 
 
+
+
 /** 
  * A grid of 3 x 3 cells in which the players insert marks to indicate their desired movements.
  * 
- * @Requirement 
+ * @Feature 
  */
 public class GameGrid extends Grid {
 
