@@ -15,10 +15,11 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/tictactoe/greet</url-pattern>
   </servlet-mapping>
+ 
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>staticFiles/TicTacToeHome.html</welcome-file>
+    <welcome-file>TicTacToeHome.html</welcome-file>
   </welcome-file-list>
 
 </web-app>
