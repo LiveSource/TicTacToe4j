@@ -4,16 +4,12 @@ import helpagile.client.exportation.HelpHint;
 import tictactoe.client.GlobalVariables;
 import tictactoe.shared.GameEntity;
 
-
-
-
-
-/** 
+/**
  * If there is three consecutive marks in a horizontal, vertical, or diagonal
- series, the current Player wins the game, the system highlights the winning
- sequence and the game is over.
+ * series, the current Player wins the game, the system highlights the winning
+ * sequence and the game is over.
  * 
- * @MainFeature 
+ * @Feature
  */
 public class WinningSequence {
 
