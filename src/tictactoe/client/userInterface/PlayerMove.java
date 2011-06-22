@@ -6,17 +6,10 @@ import tictactoe.shared.Player;
 
 import com.google.gwt.user.client.ui.HTMLTable.Cell;
 
-
-
-
-
-
-
-/** 
+/**
  * Performs a move in the game.
  * 
- * @Blocked
- * @MainFeature 
+ * @Feature
  */
 public class PlayerMove {
 
