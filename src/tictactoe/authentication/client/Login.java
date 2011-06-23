@@ -10,11 +10,13 @@ package tictactoe.authentication.client;
 
 
 
+
+
 /** 
- * Form to identify the name and the password of the player.
+ * Testing class
  * 
- * @ToDo
- * @Feature 
+ * @Feature
+ * @ToDo 
  */
 public class Login {
 
