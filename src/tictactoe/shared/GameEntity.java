@@ -3,9 +3,13 @@ package tictactoe.shared;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
+
+
+/** 
+ * Gather all the information about a particular game.
  * 
- * @Entity
+ * @
+ * @Entity 
  */
 public class GameEntity implements Serializable {
 
